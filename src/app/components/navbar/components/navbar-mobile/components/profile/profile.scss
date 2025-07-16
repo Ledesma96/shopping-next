@@ -1,0 +1,6 @@
+@use '../../../../../../constants' as c;
+.profile-icon{
+    width: 30px;
+    height: 30px;
+    color: c.$text-color;
+}

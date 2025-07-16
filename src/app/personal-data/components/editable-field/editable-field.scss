@@ -1,0 +1,54 @@
+@use '../../../constants' as c;
+
+.editable-field {
+    margin: 16px 0;
+    padding: 0 16px;
+
+    label {
+        display: block;
+        font-weight: bold;
+        margin-bottom: 5px;
+        color: c.$text-color;
+    }
+
+    .display-mode, .edit-mode {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        background-color: white;
+        border: 1px solid c.$border-color;
+        padding: 10px;
+        border-radius: 4px;
+    }
+
+    .display-mode span {
+        color: c.$text-gray-color;
+    }
+
+    input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid c.$border-color;
+        border-radius: 4px;
+        font-size: 1rem;
+        margin-right: 10px;
+    }
+
+    .icon {
+        cursor: pointer;
+        color: c.$primary-color;
+        transition: color 0.2s;
+
+        &:hover {
+            color: c.$primary-color-hover;
+        }
+
+        &.check {
+            color: c.$secondary-color;
+
+            &:hover {
+                color: darken(c.$secondary-color, 10%);
+            }
+        }
+    }
+}

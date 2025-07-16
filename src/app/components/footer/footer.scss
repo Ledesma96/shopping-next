@@ -1,0 +1,114 @@
+@use '../../constants' as c;
+
+.footer {
+  background-color: c.$background-color;
+  color: c.$text-color;
+  font-family: 'Helvetica', sans-serif;
+  padding: 40px 20px 20px;
+
+  &__top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 40px;
+    max-width: 1200px;
+    margin: 0 auto 30px;
+  }
+
+  &__section {
+    flex: 1 1 200px;
+    min-width: 200px;
+
+    .footer__title {
+      font-weight: 700;
+      font-size: 1.1rem;
+      margin-bottom: 15px;
+      color: c.$primary-color;
+    }
+
+    .footer__list {
+      list-style: none;
+      padding: 0;
+
+      li {
+        margin-bottom: 10px;
+
+        a {
+          color: darken(c.$text-color, 20%);
+          text-decoration: none;
+          transition: color 0.3s;
+
+          &:hover {
+            color: c.$primary-color-hover;
+          }
+        }
+      }
+    }
+
+    .footer__socials {
+      display: flex;
+      gap: 15px;
+
+      a {
+        font-size: 1.2rem;
+        color: darken(c.$text-color, 20%);
+        transition: color 0.3s;
+
+        &:hover {
+          color: c.$primary-color-hover;
+        }
+      }
+    }
+
+    .footer__text {
+      margin-bottom: 10px;
+      font-size: 0.9rem;
+      color: darken(c.$text-color, 10%);
+    }
+
+    .footer__form {
+      display: flex;
+
+      input {
+        flex: 1;
+        padding: 8px;
+        border: 1px solid c.$border-color;
+        border-radius: 4px 0 0 4px;
+        font-size: 0.9rem;
+        background-color: #fff;
+        color: c.$text-color;
+      }
+
+      button {
+        padding: 8px 16px;
+        background-color: c.$primary-color;
+        color: #fff;
+        border: none;
+        border-radius: 0 4px 4px 0;
+        cursor: pointer;
+        transition: background-color 0.3s, box-shadow 0.3s;
+
+        &:hover {
+          background-color: c.$primary-color-hover;
+          box-shadow: 0 4px 8px c.$shadow-color;
+        }
+      }
+    }
+  }
+
+  &__bottom {
+    text-align: center;
+    font-size: 0.85rem;
+    color: darken(c.$text-color, 30%);
+    border-top: 1px solid c.$border-color;
+    padding-top: 20px;
+  }
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .footer__top {
+    flex-direction: column;
+    gap: 20px;
+  }
+}

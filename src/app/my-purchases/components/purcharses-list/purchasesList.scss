@@ -1,0 +1,23 @@
+@use '../../../constants' as c;
+.container-item-purchase{
+    position: relative;
+    margin-top: 16px;
+    padding: 8px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: c.$background-color;
+    border: 0.2px solid c.$border-color;
+    border-radius: 3px;
+    box-shadow: 0.5px 0.5px 0.5px 0.5px c.$shadow-color;
+    &__left, &__right{
+        &__id, &__price{
+            font-size: 1.3rem;
+            font-weight: 600;
+        }
+        &__count, &__day{
+            color: c.$text-gray-color;
+        }
+    }
+}

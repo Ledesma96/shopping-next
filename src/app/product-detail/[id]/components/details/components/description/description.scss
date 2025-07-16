@@ -1,0 +1,45 @@
+@use '../../../../../../constants' as c;
+.container-description{
+    position: relative;
+    width: 100%;
+    padding: 16px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
+    transition: all 0.3s ease-in-out;
+    &__header{
+        position: absolute;
+        top: 0;
+        left: 16px;
+        width: calc(100% - 32px);
+        height: 45px;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        background-color: c.$background-color;
+        border: solid 0.2px c.$border-color;
+        p{
+            margin: 0;
+            margin-left: 8px;
+            font-size: 1.3rem;
+            color: rgb(102, 102, 102);
+        }
+    }
+    &__body{
+        position: absolute;
+        left: 16px;
+        width: calc(100% - 32px);
+        top: 45px;
+        left: 16px;
+        padding: 8px;
+        background-color: c.$background-color;
+        border: solid 0.2px c.$border-color;
+        p{
+            color: rgb(102, 102, 102);
+            letter-spacing: 1px;
+        }
+    }
+}

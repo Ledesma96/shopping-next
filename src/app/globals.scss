@@ -1,0 +1,23 @@
+@use 'constants' as c;
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  width: 100vw;
+  min-height: 100vh;
+  background-color: #eceff1;
+}
+p{
+  margin: 0;
+}
+
+a{
+  text-decoration: none;
+  color: c.$text-color;
+}

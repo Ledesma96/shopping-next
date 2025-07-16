@@ -1,0 +1,37 @@
+@use '../../../../constants' as c;
+.navbar-mobile{
+    width: 100vw;
+    height: 80px;
+    background-color: c.$primary-color;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .container-logo{
+        position: relative;
+        width: 20%;
+        height: 50%;
+    }
+    .container-search{
+        width: 50%;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        input{
+            width: 90%;
+            height: 30px;
+            border: none;
+            border-radius: 6px;
+            padding-left: 16px;
+            outline: none;
+        }
+    }
+    .header-actions{
+        width: 30%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+    }
+}

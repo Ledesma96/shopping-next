@@ -1,0 +1,65 @@
+@use '../../../../../constants' as c;
+.authentication-phone {
+    max-width: 400px;
+    margin: 20px auto;
+    padding: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #fafafa;
+    box-shadow: c.$shadow-color;
+
+    h4 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+        color: c.$text-color;
+    }
+
+    input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        font-size: 1rem;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+        transition: c.$border-color 0.3s ease;
+
+        &:focus {
+            border-color: c.$primary-color;
+            outline: none;
+        }
+
+        &:disabled {
+            background-color: #f0f0f0;
+            color: #999;
+        }
+    }
+
+    button {
+        width: 100%;
+        padding: 10px;
+        background-color: c.$primary-color;
+        color: white;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        margin: 10px 0;
+        transition: c.$background-color 0.3s ease;
+
+        &:hover {
+            background-color: c.$primary-color;
+        }
+
+        &:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+    }
+
+    .verified {
+        color: green;
+        font-weight: bold;
+        margin: 10px 0;
+        text-align: center;
+    }
+}

@@ -1,0 +1,33 @@
+@use "../../../constants" as c;
+.add-product-form {
+    background-color: c.$background-color;
+    padding: 2rem;
+    border: 1px solid c.$border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px c.$shadow-color;
+    max-width: 500px;
+    margin: 0 auto;
+
+    h2 {
+        color: c.$primary-color;
+        font-size: 1.5rem;
+        margin-bottom: 1.5rem;
+        text-align: center;
+    }
+
+    button {
+        background-color: c.$secondary-color;
+        color: white;
+        padding: 0.75rem 1.5rem;
+        font-weight: bold;
+        border: none;
+        border-radius: 4px;
+        cursor: pointer;
+        width: 100%;
+        transition: background-color 0.3s ease;
+
+        &:hover {
+            background-color: darken(c.$secondary-color, 10%);
+        }
+    }
+}

@@ -1,0 +1,71 @@
+.universal-modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  
+    .universal-modal {
+      background: white;
+      border-radius: 8px;
+      padding: 2rem;
+      max-width: 500px;
+      width: 90%;
+      box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+      animation: fadeIn 0.3s ease;
+  
+      &__title {
+        margin: 0 0 1rem;
+        font-size: 1.5rem;
+      }
+  
+      &__description {
+        margin: 0 0 1.5rem;
+        font-size: 1rem;
+        color: #333;
+      }
+  
+      &__buttons {
+        display: flex;
+        justify-content: flex-end;
+        gap: 1rem;
+  
+        & > .universal-modal__button {
+          border: none;
+          padding: 0.6rem 1.2rem;
+          border-radius: 4px;
+          cursor: pointer;
+          font-weight: bold;
+          transition: background-color 0.2s ease;
+  
+          &--cancel {
+            background-color: #ccc;
+            color: #000;
+  
+            &:hover {
+              background-color: #b0b0b0;
+            }
+          }
+  
+          &--confirm {
+            background-color: #e63946;
+            color: #fff;
+  
+            &:hover {
+              background-color: #d62839;
+            }
+          }
+        }
+      }
+    }
+  }
+  
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+  }

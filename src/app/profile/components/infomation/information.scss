@@ -1,0 +1,37 @@
+@use '../../../constants' as c;
+
+.perfil-publico {
+    width: 100%;
+    background-color: c.$background-color;
+    padding: 16px;
+    border: 1px solid c.$border-color;
+    border-radius: 8px;
+    box-shadow: 0 2px 6px c.$shadow-color;
+    color: c.$text-color;
+    font-size: 14px;
+
+    h3 {
+        font-size: 16px;
+        color: c.$primary-color;
+        margin-bottom: 12px;
+    }
+
+    &__info-item {
+        display: flex;
+        align-items: center;
+        margin-bottom: 10px;
+
+        svg {
+            margin-right: 8px;
+            color: c.$primary-color;
+        }
+
+        .verified {
+            color: c.$secondary-color;
+        }
+
+        .not-verified {
+            color: c.$accent-color;
+        }
+    }
+}

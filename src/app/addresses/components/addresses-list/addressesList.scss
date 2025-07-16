@@ -1,0 +1,40 @@
+.addressList {
+    ul {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+    }
+
+    li {
+        border: 1px solid #e2e8f0;
+        padding: 1rem;
+        border-radius: 0.5rem;
+        box-shadow: 0 1px 4px rgba(0, 0, 0, 0.05);
+        display: flex;
+        flex-direction: column;
+        gap: 0.25rem;
+        transition: transform 0.2s ease;
+    
+        &:hover {
+            transform: translateY(-2px);
+        }
+    
+        .addressName {
+            font-weight: 600;
+        }
+    
+        .addressInfo {
+            color: #4a5568;
+        }
+    }
+
+    .addNewSection {
+        margin-top: 2rem;
+    
+        h2 {
+            font-size: 1.25rem;
+            font-weight: bold;
+            margin-bottom: 0.5rem;
+        }
+    }
+}

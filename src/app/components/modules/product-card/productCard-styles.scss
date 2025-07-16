@@ -1,0 +1,50 @@
+@use '../../../constants' as c;
+.product-card {
+    position: relative;
+    margin: 0 8px;
+    width: 250px;
+    height: 450px;
+    border: solid 0.2px c.$border-color;
+    text-decoration: none;
+
+    &__favorite{
+        position: absolute;
+        top: 10;
+        left: 10;
+        width: 35px;
+        height: 35px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: c.$text-color;
+        z-index: 99;
+    }
+    .favorite{
+        color:  #e53935;
+    }
+    
+    &__container-img{
+        position: relative;
+        margin: 0 auto;
+        width: 90%;
+        height: 80%;
+
+        &__image{
+            object-fit: cover;
+        }
+    }
+
+    &__name{
+        margin-top: 8px;
+        margin-left: 12px;
+        font-size: 1rem;
+        color: c.$text-color;
+    }
+
+    &__price{
+        margin-left: 12px;
+        font-size: 1.5rem;
+        color: c.$text-color;
+        font-weight: 600;
+    }
+}
