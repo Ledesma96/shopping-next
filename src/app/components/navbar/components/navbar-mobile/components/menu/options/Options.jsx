@@ -6,14 +6,12 @@ import { FiLogIn } from "react-icons/fi";
 import { GoHome } from "react-icons/go";
 import { MdOutlineFavoriteBorder } from "react-icons/md";
 import { RiCustomerService2Fill } from "react-icons/ri";
+import { useSelector } from "react-redux";
 import './options.scss';
 
 const Options = ({open, handleClick}) => {
-    // const user = useSelector((state) => state.auth.user);
-    const user = {
-        avatar: '',
-        name: 'Pepito'
-    }
+    const user = useSelector((state) => state.auth.user);
+    
     const capitalLater = (charter) => {
         return charter.toUpperCase()
     }

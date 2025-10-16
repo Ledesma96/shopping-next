@@ -1,6 +1,7 @@
 import Image from "next/image";
 import { Menu, Profile } from "./components";
 import './navbarMobile.scss';
+import Search from "../shared/Search";
 
 const NavbarMobile = () => {
     return (
@@ -12,9 +13,7 @@ const NavbarMobile = () => {
                     fill
                 />
             </div>
-            <div className="container-search">
-                <input placeholder="Buscar"/>
-            </div>
+            <Search />
             <div className="header-actions">
                 <Menu />
                 <Profile />

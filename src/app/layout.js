@@ -29,6 +29,9 @@ export default function RootLayout({ children }) {
           {children}
           <Footer />
         </ProviderRedux>
+        <script src="https://unpkg.com/react@18/umd/react.production.min.js"></script>
+        <script src="https://unpkg.com/react-dom@18/umd/react-dom.production.min.js"></script>
+        <script src="https://unpkg.com/recharts/umd/Recharts.js"></script>
       </body>
     </html>
   );

@@ -1,0 +1,93 @@
+@use '../../../../../../../../constants' as c;
+.filters{
+    position: absolute;
+    padding-top: 2rem;
+    top: 0;
+    right: 0;
+    width: 70%;
+    min-height: 100vh;
+    background-color: white;
+    z-index: 999;
+    transition: all 0.5s ease-in-out;
+    .close{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top:5;
+        right: 5;
+        border: c.$border-color;
+        font-size: 2rem;
+    }
+    .filter-group{
+        width: 90%;
+        margin: auto;
+        margin-top: 16px;
+        border-bottom: 0.2px solid c.$text-gray-color;
+        overflow: hidden;
+        .header{
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+            align-items: center;
+            h4{
+                margin: 0;
+            }
+            svg{
+                margin-left: 6px;
+                width: 24px;
+                height: 24px;
+            }
+            .up{
+                transform: rotate(-180deg);
+                transition: all 0.3s ease-in-out;
+            }
+            .down{
+                transform: rotate(0deg);
+                transition: all 0.3s ease-in-out;
+            }
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        left: -43%;
+        width: 43%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    .accordion-content{
+        display: flex;
+        flex-direction: column;
+        .filter-option{
+            margin-left: 16px;
+            margin-top: 8px;
+            display: flex;
+            justify-content: flex-start;
+            align-items: center;
+            input{
+                width: 16px;
+                height: 16px;
+                margin-right: 6px;
+            }
+        }
+    }
+    .clean-btn{
+        margin: 0 auto;
+        width: 90%;
+        height: 35px;
+        border: none;
+        background-color: c.$primary-color;
+        font-size: 1rem;
+        font-weight: 600;
+        border-radius: 3px;
+        color: white;
+    }
+}
+.filters-off{
+    position: absolute;
+    top: 0;
+    right: -100%;
+    transition: all 0.5s ease-in-out;
+}

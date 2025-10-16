@@ -5,6 +5,12 @@ import './stars.scss';
 const Stars = ({ stars, max = 5 }) => {
     const fullStars = Math.floor(stars);
     const fractionalPart = stars % 1;
+
+    if(stars == 0){
+        return(
+            <p className="rating-message">Este producto aún no fue calificado</p>
+        )
+    }
     
     return (
         <div className="container-rating">

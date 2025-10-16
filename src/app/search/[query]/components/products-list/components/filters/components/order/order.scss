@@ -1,0 +1,51 @@
+@use '../../../../../../../../constants' as c;
+.order{
+    position: relative;
+    padding-top: 2rem;
+    width: 70%;
+    height: 100vh;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+
+    &::before {
+        content: "";
+        position: absolute;
+        top: 0;
+        right: -43%;
+        width: 43%;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.2);
+        z-index: 1;
+    }
+    button{
+        position: absolute;
+        width: 30px;
+        height: 30px;
+        top:5;
+        right: 5;
+        border: c.$border-color;
+        font-size: 2rem;
+    }
+    label{
+        margin: 16px;
+        padding-bottom: 3px;
+        border-bottom: 0.2px solid c.$text-gray-color;
+        display: flex;
+        flex-direction: row;
+        
+    }
+}
+.order-on{
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: all 0.5s ease-in-out;
+}
+.order-off{
+    position: absolute;
+    top: 0;
+    left: -100%;
+    transition: all 0.5s ease-in-out;
+}

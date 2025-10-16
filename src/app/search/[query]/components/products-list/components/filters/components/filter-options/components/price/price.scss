@@ -1,0 +1,69 @@
+@use '../../../../../../../../../../constants' as c;
+.price-range {
+    padding: 1rem;
+    h4 {
+        margin-bottom: 0.5rem;
+        font-size: 1rem;
+    }
+
+    .slider-container {
+        position: relative;
+        width: 100%;
+        height: 40px;
+    }
+
+    input[type="range"] {
+        position: absolute;
+        pointer-events: none; // evitar que los sliders choquen
+        -webkit-appearance: none;
+        width: 100%;
+        height: 5px;
+        background: none;
+        outline: none;
+        z-index: 3;
+    
+        &::-webkit-slider-thumb {
+            -webkit-appearance: none;
+            pointer-events: auto;
+            height: 18px;
+            width: 9px;
+            border-radius: 6px;
+            background: c.$primary-color; // color moderno (naranja)
+            cursor: pointer;
+            box-shadow: 0 0 4px rgba(0, 0, 0, 0.3);
+            transition: transform 0.2s;
+            &:hover {
+            transform: scale(1.2);
+            }
+        }
+    }
+
+    .slider-track {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5px;
+        width: 100%;
+        background: #ddd;
+        border-radius: 5px;
+        z-index: 1;
+    }
+
+    .slider-range {
+        position: absolute;
+        top: 50%;
+        transform: translateY(-50%);
+        height: 5px;
+        background: c.$primary-color;
+        border-radius: 5px;
+        z-index: 2;
+    }
+
+    .price-values {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 0.5rem;
+        font-size: 0.9rem;
+        color: #333;
+    }
+}

@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../constants' as c;
 .help-center {
     background-color: c.$background-color;
@@ -76,7 +77,7 @@
             transition: background-color 0.2s;
 
             &:hover {
-                background-color: darken(c.$accent-color, 10%);
+                background-color: color.adjust(c.$accent-color, $lightness: -10%);
             }
         }
     }

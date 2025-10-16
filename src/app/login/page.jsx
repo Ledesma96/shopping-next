@@ -2,7 +2,7 @@
 
 import Link from "next/link";
 import { useRouter } from "next/navigation";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FiLock, FiUser } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
@@ -15,26 +15,34 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
+    const user = useSelector((state) => state.auth.user);
 
     const dispatch = useDispatch();
     const router = useRouter();
 
-    const user = useSelector((state) => state.auth.user);
+
+    useEffect(() => {
+        if (user) window.location.href = '/';
+    }, [user])
 
     const handleLogin = async (e) => {
         e.preventDefault();
         if (email === '' || password === '') return;
 
-        console.log(email);
-        
         try {
         setLoading(true);
-        const data = { email, password };
+        const data = {
+            email: email.toLowerCase(),
+            password
+        };
         const response = await login(data);
+        console.log(response);
+        
 
         if (response.message === "Login successful") {
             await dispatch(fetchUser());
             router.push('/');
+            
         }
         } catch (error) {
         console.error(error);

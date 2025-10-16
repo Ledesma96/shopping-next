@@ -1,0 +1,102 @@
+[
+  {
+    "id": 1,
+    "product": "Zapatillas",
+    "percentage": 6.25,
+    "category": "Calzado",
+    "price": 25000,
+    "stock": 120,
+    "date": "2025-09-01",
+    "tags": ["deporte", "urbano"]
+  },
+  {
+    "id": 2,
+    "product": "Remeras",
+    "percentage": 6.87,
+    "category": "Ropa",
+    "price": 12000,
+    "stock": 200,
+    "date": "2025-09-10",
+    "tags": ["verano", "casual"]
+  },
+  {
+    "id": 3,
+    "product": "Camisa",
+    "percentage": 12.5,
+    "category": "Ropa",
+    "price": 18000,
+    "stock": 75,
+    "date": "2025-08-25",
+    "tags": ["formal", "oficina"]
+  },
+  {
+    "id": 4,
+    "product": "Medias",
+    "percentage": 15,
+    "category": "Accesorios",
+    "price": 3000,
+    "stock": 350,
+    "date": "2025-09-15",
+    "tags": ["deporte", "básico"]
+  },
+  {
+    "id": 5,
+    "product": "Reloj",
+    "percentage": 16.87,
+    "category": "Accesorios",
+    "price": 55000,
+    "stock": 50,
+    "date": "2025-07-30",
+    "tags": ["lujo", "moda"]
+  },
+  {
+    "id": 6,
+    "product": "Gorra",
+    "percentage": 17.5,
+    "category": "Accesorios",
+    "price": 8000,
+    "stock": 90,
+    "date": "2025-09-20",
+    "tags": ["urbano", "casual"]
+  },
+  {
+    "id": 7,
+    "product": "Crocks",
+    "percentage": 25,
+    "category": "Calzado",
+    "price": 15000,
+    "stock": 60,
+    "date": "2025-09-05",
+    "tags": ["verano", "comodidad"]
+  },
+  {
+    "id": 8,
+    "product": "Campera de abrigo",
+    "percentage": 12,
+    "category": "Ropa",
+    "price": 45000,
+    "stock": 40,
+    "date": "2025-08-10",
+    "tags": ["invierno", "moda"]
+  },
+  {
+    "id": 9,
+    "product": "Mochila",
+    "percentage": 18,
+    "category": "Accesorios",
+    "price": 20000,
+    "stock": 130,
+    "date": "2025-09-12",
+    "tags": ["viaje", "urbano"]
+  },
+  {
+    "id": 10,
+    "product": "Botines de fútbol",
+    "percentage": 22,
+    "category": "Calzado",
+    "price": 30000,
+    "stock": 70,
+    "date": "2025-09-18",
+    "tags": ["deporte", "profesional"]
+  }
+]

@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../../constants' as c;
 
 .footer {
@@ -34,7 +35,7 @@
         margin-bottom: 10px;
 
         a {
-          color: darken(c.$text-color, 20%);
+          color: color.adjust(c.$text-color, $lightness: -10%);
           text-decoration: none;
           transition: color 0.3s;
 
@@ -51,7 +52,7 @@
 
       a {
         font-size: 1.2rem;
-        color: darken(c.$text-color, 20%);
+        color: color.adjust(c.$text-color, $lightness: -10%);
         transition: color 0.3s;
 
         &:hover {
@@ -63,7 +64,7 @@
     .footer__text {
       margin-bottom: 10px;
       font-size: 0.9rem;
-      color: darken(c.$text-color, 10%);
+      color: color.adjust(c.$text-color, $lightness: -10%);
     }
 
     .footer__form {
@@ -99,7 +100,7 @@
   &__bottom {
     text-align: center;
     font-size: 0.85rem;
-    color: darken(c.$text-color, 30%);
+    color: color.adjust(c.$text-color, $lightness: 30%);
     border-top: 1px solid c.$border-color;
     padding-top: 20px;
   }

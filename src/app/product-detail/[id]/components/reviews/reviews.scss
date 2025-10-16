@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../../../../constants' as c;
 
 .reviews-container {
@@ -40,7 +41,7 @@
 
     &__comment {
         margin-top: 8px;
-        color: darken(c.$text-color, 20%);
+        color: color.adjust(c.$text-color,$lightness: -20%);
     }
 
     &__empty {

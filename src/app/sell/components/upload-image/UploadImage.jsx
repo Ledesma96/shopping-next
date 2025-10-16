@@ -1,27 +1,34 @@
 'use client'
-import React, { useState } from 'react';
+import React from 'react';
 import './uploadImage.scss';
 
-const UploadImage = ({ onImageSelected }) => {
-    const [preview, setPreview] = useState(null);
-
+const UploadImage = ({ images, setImages }) => {
+    
     const handleFileChange = (e) => {
         const file = e.target.files[0];
         if (!file) return;
 
-        setPreview(URL.createObjectURL(file));
-        onImageSelected(file);
+        // Añadimos el nuevo archivo al estado
+        setImages(prevImages => [...prevImages, file]);
     };
 
     return (
         <div className='upload-image'>
-            <label htmlFor="fileInput" className="upload-label">
-                {preview ? (
-                    <img src={preview} alt="Previsualización" className='preview-image' />
-                ) : (
-                    <span>Subir imagen</span>
-                )}
+            {/* Previsualización de imágenes usando URL.createObjectURL */}
+            {images.map((img, index) => (
+                <div key={index} className="image-wrapper">
+                    <img
+                        src={URL.createObjectURL(img)}
+                        alt={`imagen-${index}`}
+                        className='preview-image'
+                    />
+                </div>
+            ))}
+
+            <label htmlFor="fileInput" className="upload-label add-more">
+                <span>+</span>
             </label>
+
             <input
                 type="file"
                 id="fileInput"
@@ -34,3 +41,4 @@ const UploadImage = ({ onImageSelected }) => {
 };
 
 export default UploadImage;
+

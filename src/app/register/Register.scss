@@ -23,6 +23,25 @@
         margin-bottom: 1.5rem;
         }
 
+        .conditions{
+            margin-top: -8px;
+            margin-bottom: 8px;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            align-items: flex-start;
+            div{
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                align-items: center;
+                font-size: 0.8rem;
+                p{
+                    margin-left: 6px;
+                }
+            }
+        }
+
         .input-group {
         position: relative;
         margin-bottom: 1rem;

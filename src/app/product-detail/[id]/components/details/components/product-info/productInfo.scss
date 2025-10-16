@@ -1,3 +1,4 @@
+@use "sass:color";
 @use '../../../../../../constants' as c;
 
 .product-info-container {
@@ -73,7 +74,7 @@
             background-color: c.$secondary-color;
 
             &:hover {
-            background-color: darken(c.$secondary-color, 10%);
+            background-color: color.adjust(c.$secondary-color, $lightness: -10%);
             }
         }
     }

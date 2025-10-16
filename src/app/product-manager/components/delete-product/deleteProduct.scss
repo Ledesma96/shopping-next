@@ -1,0 +1,23 @@
+.delete-product-modal {
+    .MuiDialog-paper {
+        border-radius: 12px;
+        padding: 1rem;
+    }
+
+    .MuiDialogTitle-root {
+        font-weight: 600;
+        font-size: 1.25rem;
+    }
+
+    .MuiDialogContent-root {
+        font-size: 1rem;
+        color: #333;
+        }
+
+    .MuiDialogActions-root {
+        padding: 1rem;
+            button {
+                min-width: 100px;
+            }
+        }
+}

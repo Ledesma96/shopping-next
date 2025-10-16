@@ -1,13 +1,13 @@
 import api from "./api.config";
 
-export const login = async (loginDto) => {
-    const response = await api.post(`api/v1/users/login`, loginDto);
-    console.log('response' , response.data);
+export const login = async (data) => {
+    const response = await api.post(`api/v1/users/login`, data);
+    console.log(response);
     
     return response.data;
 };
 
 export const register = async (data) => {
-    const response = await api.post(`${api}api/v1/users/register`, data);
+    const response = await api.post(`api/v1/users/create-user`, data);
     return response.data;
 };

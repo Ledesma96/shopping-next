@@ -1,22 +1,20 @@
 @use '../../../constants' as c;
 .product-card {
     position: relative;
-    margin: 0 8px;
-    width: 250px;
-    height: 450px;
-    border: solid 0.2px c.$border-color;
+    margin: 0 6px;
+    width: 100%;
+    height: 100%;
     text-decoration: none;
 
     &__favorite{
         position: absolute;
-        top: 10;
+        top: 0;
         left: 10;
         width: 35px;
         height: 35px;
         display: flex;
         justify-content: center;
         align-items: center;
-        color: c.$text-color;
         z-index: 99;
     }
     .favorite{
@@ -26,8 +24,9 @@
     &__container-img{
         position: relative;
         margin: 0 auto;
+        margin-top: 10px;
         width: 90%;
-        height: 80%;
+        height: 200px;
 
         &__image{
             object-fit: cover;

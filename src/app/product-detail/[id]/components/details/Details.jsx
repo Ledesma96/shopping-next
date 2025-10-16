@@ -1,5 +1,5 @@
 import React from 'react';
-import { Stars } from '../../../../components';
+import Stars from '../../../../components/modules/stars/Stars';
 import { Description, ProductInfo } from './components';
 
 const Details = ({product}) => {

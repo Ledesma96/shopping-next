@@ -7,6 +7,7 @@ import './gallery.scss';
 
 
 const Gallery = ({images}) => {
+    
     const [windowWidth, setWindowWidth] = useState(window.innerWidth);
 
     useEffect(() => {

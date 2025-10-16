@@ -1,0 +1,4120 @@
+[
+  {
+    "title": "Mochila North Face Borealis",
+    "description": "Mochila North Face Borealis - descripción de ejemplo con características únicas.",
+    "price": 825.65,
+    "stock": 95,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fa41e8ba257bc7576cf0c2c1"
+    },
+    "categories": [
+      "audio"
+    ],
+    "tags": [
+      "importado",
+      "rebaja"
+    ],
+    "salesCount": 45,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.3,
+    "reviews": []
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 1454.26,
+    "stock": 113,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "eb1b6805643caeeebf9e1ec3"
+    },
+    "categories": [
+      "gaming",
+      "jardinería"
+    ],
+    "tags": [
+      "rebaja",
+      "importado"
+    ],
+    "salesCount": 416,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "8c6687aff48150060caa85b5"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-07-21T14:22:09.099976Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "164c132eefee85411c05959e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-11-23T14:22:09.099992Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "4d6f6d0613c107bdcb1e5e03"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-02-21T14:22:09.099999Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 1603.04,
+    "stock": 169,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0ce562326238e0ccf51a74d7"
+    },
+    "categories": [
+      "moda"
+    ],
+    "tags": [
+      "limitado",
+      "importado",
+      "nuevo"
+    ],
+    "salesCount": 348,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "b0d53b804dc9a8dc0021cbda"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-03-22T14:22:09.100025Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "95eecf9097736f8bf1405833"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-04-30T14:22:09.100033Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "db6decad4863f6fe8ed71d69"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-04-24T14:22:09.100043Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 1838.63,
+    "stock": 14,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "a3dc200284315e264b496e4b"
+    },
+    "categories": [
+      "hogar",
+      "tecnología"
+    ],
+    "tags": [
+      "destacado",
+      "nuevo"
+    ],
+    "salesCount": 293,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.3,
+    "reviews": []
+  },
+  {
+    "title": "Tablet iPad Air 2022",
+    "description": "Tablet iPad Air 2022 - descripción de ejemplo con características únicas.",
+    "price": 1205.2,
+    "stock": 148,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "ad251c590b2155a6c659a9ff"
+    },
+    "categories": [
+      "accesorios"
+    ],
+    "tags": [
+      "limitado",
+      "premium"
+    ],
+    "salesCount": 402,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "c0f2282977cefd02757a8a32"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-12-02T14:22:09.100199Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "05e19201f759f8d033a0e9f2"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-12-09T14:22:09.100207Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "32fea56dfc2fd1d68a7cb59e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-08-12T14:22:09.100217Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 676.32,
+    "stock": 62,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "92ac9dd6d5f5036e54e15882"
+    },
+    "categories": [
+      "oficina",
+      "moda"
+    ],
+    "tags": [
+      "nuevo",
+      "limitado",
+      "rebaja"
+    ],
+    "salesCount": 104,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "99285440eba948dd4c8c33c2"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-01-04T14:22:09.100258Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "f9cf77650d4cdc08ecfff7e5"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2024-10-10T14:22:09.100268Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartphone Samsung Galaxy S23",
+    "description": "Smartphone Samsung Galaxy S23 - descripción de ejemplo con características únicas.",
+    "price": 574.43,
+    "stock": 107,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "63444e5af3cd424a9d403a60"
+    },
+    "categories": [
+      "audio",
+      "moda"
+    ],
+    "tags": [
+      "premium",
+      "destacado",
+      "nuevo"
+    ],
+    "salesCount": 134,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "e75a75580eee2e1bc106a28b"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-05-05T14:22:09.100291Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Bicicleta Trek FX 3 Disc",
+    "description": "Bicicleta Trek FX 3 Disc - descripción de ejemplo con características únicas.",
+    "price": 28.33,
+    "stock": 114,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0af41f262c47078f8172f03f"
+    },
+    "categories": [
+      "deportes"
+    ],
+    "tags": [
+      "limitado",
+      "nuevo",
+      "oferta"
+    ],
+    "salesCount": 143,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "332eafd64a9bbe8928eabeda"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-05-30T14:22:09.100329Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "d1c6e955671f5f563a9f7db1"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-02-16T14:22:09.100336Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Mouse Gamer SteelSeries Rival 600",
+    "description": "Mouse Gamer SteelSeries Rival 600 - descripción de ejemplo con características únicas.",
+    "price": 1603.86,
+    "stock": 24,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "1a0888d78c0648cd9d52c7a0"
+    },
+    "categories": [
+      "electrodomésticos"
+    ],
+    "tags": [
+      "nuevo",
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 355,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3e3ceee61443116b87143bdf"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-02-11T14:22:09.100357Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "df3c795fa3da97e0ce80a42a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-03-07T14:22:09.100364Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 470.32,
+    "stock": 93,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "05f6222ff72e7db8a4ae251e"
+    },
+    "categories": [
+      "accesorios"
+    ],
+    "tags": [
+      "importado"
+    ],
+    "salesCount": 480,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.3,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "a7c1d9d06de8f8f477f88275"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-09-19T14:22:09.100384Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "6062bc702e3ac241ac754764"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-24T14:22:09.100390Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "9b42a07e01e6859383523c15"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-03-13T14:22:09.100396Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 1462.0,
+    "stock": 184,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "a076c47a6a94740c6ff02ca8"
+    },
+    "categories": [
+      "oficina",
+      "deportes"
+    ],
+    "tags": [
+      "limitado",
+      "importado",
+      "oferta"
+    ],
+    "salesCount": 81,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.2,
+    "reviews": []
+  },
+  {
+    "title": "Mouse Gamer SteelSeries Rival 600",
+    "description": "Mouse Gamer SteelSeries Rival 600 - descripción de ejemplo con características únicas.",
+    "price": 807.26,
+    "stock": 29,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "e06d55937667925d775b5a70"
+    },
+    "categories": [
+      "tecnología",
+      "accesorios"
+    ],
+    "tags": [
+      "nuevo",
+      "limitado"
+    ],
+    "salesCount": 216,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "7deea7b9fa0d4ed1e9679d11"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-10-14T14:22:09.100433Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Mochila North Face Borealis",
+    "description": "Mochila North Face Borealis - descripción de ejemplo con características únicas.",
+    "price": 238.55,
+    "stock": 107,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "06d03c7395a51ae8099be9e6"
+    },
+    "categories": [
+      "deportes",
+      "muebles"
+    ],
+    "tags": [
+      "nuevo",
+      "importado",
+      "oferta"
+    ],
+    "salesCount": 478,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "d96938e3c86615dba9fd5ae0"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-01-21T14:22:09.100467Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "af0d2b38f62158d753bd1993"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-08-19T14:22:09.100474Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "043f75008d946add53882b74"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-04-18T14:22:09.100484Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Silla Gamer Razer",
+    "description": "Silla Gamer Razer - descripción de ejemplo con características únicas.",
+    "price": 1592.41,
+    "stock": 80,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "ceb92d1b1472d67d8c467ad3"
+    },
+    "categories": [
+      "hogar"
+    ],
+    "tags": [
+      "nuevo",
+      "importado",
+      "oferta"
+    ],
+    "salesCount": 451,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "23c433c875fb7a40612cc6aa"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-13T14:22:09.100517Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "7cd80505571cd7953d99a570"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-09-21T14:22:09.100524Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "f9a8cd3773e1c54bf053c8df"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-01-16T14:22:09.100530Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 496.21,
+    "stock": 43,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "195de3e44f567d0566f39d5f"
+    },
+    "categories": [
+      "electrodomésticos",
+      "tecnología"
+    ],
+    "tags": [
+      "destacado"
+    ],
+    "salesCount": 474,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "c2525b1e943133a63542b891"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-04-15T14:22:09.100550Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "5b0a35cb58edb665b4e62134"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-05-15T14:22:09.100557Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 1015.87,
+    "stock": 164,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "b95de6a155bc19c7ebd86f6f"
+    },
+    "categories": [
+      "moda",
+      "hogar"
+    ],
+    "tags": [
+      "nuevo",
+      "limitado"
+    ],
+    "salesCount": 175,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "e675d5a7e639c87e1a9036ac"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-05-11T14:22:09.100576Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "395de081e28c496110c0a285"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-08-18T14:22:09.100582Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "38f158410f6562f5cc7170f9"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-12-15T14:22:09.100588Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Licuadora Oster Pro 1200",
+    "description": "Licuadora Oster Pro 1200 - descripción de ejemplo con características únicas.",
+    "price": 1429.19,
+    "stock": 172,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fc83399e569d0916035ad4c7"
+    },
+    "categories": [
+      "electrodomésticos",
+      "deportes"
+    ],
+    "tags": [
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 141,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.7,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "5c42be24b1ff2356d46bb97d"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-02-19T14:22:09.100608Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 878.0,
+    "stock": 115,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "10ccf09ce027af64c1baf045"
+    },
+    "categories": [
+      "moda",
+      "muebles"
+    ],
+    "tags": [
+      "premium",
+      "rebaja"
+    ],
+    "salesCount": 215,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.3,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "c48246268c18fddbc201d8fc"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-03-16T14:22:09.100627Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Mochila North Face Borealis",
+    "description": "Mochila North Face Borealis - descripción de ejemplo con características únicas.",
+    "price": 439.12,
+    "stock": 83,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "9a83a5cea275f7438c055122"
+    },
+    "categories": [
+      "calzado",
+      "accesorios"
+    ],
+    "tags": [
+      "premium",
+      "rebaja"
+    ],
+    "salesCount": 368,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "9d4c254f50d50bdbbd3990d0"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-05-21T14:22:09.100647Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 1436.73,
+    "stock": 183,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "557b7cde22ed601b60ea6dd5"
+    },
+    "categories": [
+      "oficina"
+    ],
+    "tags": [
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 250,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.3,
+    "reviews": []
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 1979.25,
+    "stock": 16,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "f65436fba5ffc4e6a13b972a"
+    },
+    "categories": [
+      "audio"
+    ],
+    "tags": [
+      "rebaja",
+      "oferta"
+    ],
+    "salesCount": 218,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "98e17fdcd3b619c23a189563"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-12-13T14:22:09.100679Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 1019.44,
+    "stock": 76,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "3cbfa48a82136b742931ee90"
+    },
+    "categories": [
+      "bebés"
+    ],
+    "tags": [
+      "premium",
+      "oferta"
+    ],
+    "salesCount": 367,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "684c112b3954074bf0b36054"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-11-28T14:22:09.100699Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "abfefb0ec44640a2179a2948"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-07-03T14:22:09.100705Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 1318.81,
+    "stock": 51,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fe64911462f51d9c063083a0"
+    },
+    "categories": [
+      "bebés"
+    ],
+    "tags": [
+      "rebaja",
+      "importado"
+    ],
+    "salesCount": 81,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "f52d12fa3cbb7af7a4a9f2c8"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-12-03T14:22:09.100724Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 161.32,
+    "stock": 130,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "58d9ab015a442aae3e6e9e36"
+    },
+    "categories": [
+      "bebés"
+    ],
+    "tags": [
+      "nuevo",
+      "importado",
+      "rebaja"
+    ],
+    "salesCount": 7,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "b53723a5224c7e9a2c64043a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-11-24T14:22:09.100743Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "5b1b8c9e419c4240240caca3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-06-04T14:22:09.100750Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "891807887326fbc0dc4619bc"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-06-15T14:22:09.100756Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 294.76,
+    "stock": 77,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "2d4aa9c00eb66eb847a35eb2"
+    },
+    "categories": [
+      "audio",
+      "muebles"
+    ],
+    "tags": [
+      "destacado",
+      "nuevo",
+      "premium"
+    ],
+    "salesCount": 479,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.8,
+    "reviews": []
+  },
+  {
+    "title": "Bicicleta Trek FX 3 Disc",
+    "description": "Bicicleta Trek FX 3 Disc - descripción de ejemplo con características únicas.",
+    "price": 140.51,
+    "stock": 100,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "a01796e5680e49b5f0ccb9a2"
+    },
+    "categories": [
+      "electrodomésticos",
+      "bebés"
+    ],
+    "tags": [
+      "destacado"
+    ],
+    "salesCount": 302,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "910ef827c663bf7ea8f481c0"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-07-23T14:22:09.100787Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "0ec2644e55c5c4c6e3a7a352"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-03-18T14:22:09.100794Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 1270.31,
+    "stock": 4,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "8a47641c6667024d9a485440"
+    },
+    "categories": [
+      "accesorios",
+      "hogar"
+    ],
+    "tags": [
+      "importado",
+      "destacado"
+    ],
+    "salesCount": 108,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "65c7dbe840a732862335227c"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-03-13T14:22:09.100812Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 1239.43,
+    "stock": 40,
+    "images": [
+      "https://images.unsplash.com/photo-1509099836639-18ba1795216d"
+    ],
+    "seller": {
+      "$oid": "8255cbdedcc37c48df843d54"
+    },
+    "categories": [
+      "accesorios",
+      "aventura"
+    ],
+    "tags": [
+      "destacado",
+      "importado",
+      "limitado"
+    ],
+    "salesCount": 230,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "b870eff3793773e632d3d56e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-01-01T14:22:09.100848Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "4fa74953b7987461b7323d3b"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-07-07T14:22:09.100856Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 1691.93,
+    "stock": 106,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "a7050c3c1aabddd20926aef8"
+    },
+    "categories": [
+      "gaming"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja",
+      "destacado"
+    ],
+    "salesCount": 194,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "2a1f540425c2de41de8a0a31"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-04-21T14:22:09.100875Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "276f6af174937f77da6b77c6"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-07-31T14:22:09.100882Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 1411.95,
+    "stock": 140,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "20ee3a34d23c2a49b107e649"
+    },
+    "categories": [
+      "deportes",
+      "hogar"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 491,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.5,
+    "reviews": []
+  },
+  {
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop Apple MacBook Pro 14 - descripción de ejemplo con características únicas.",
+    "price": 634.5,
+    "stock": 158,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "15c0bd950fb7e17591a649fe"
+    },
+    "categories": [
+      "deportes"
+    ],
+    "tags": [
+      "importado",
+      "premium"
+    ],
+    "salesCount": 143,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.1,
+    "reviews": []
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 967.79,
+    "stock": 1,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "6fd6b5c71265e8f2e6f545f0"
+    },
+    "categories": [
+      "oficina"
+    ],
+    "tags": [
+      "importado",
+      "nuevo",
+      "limitado"
+    ],
+    "salesCount": 157,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "e0509d7e4940e316ea64d89c"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-04-21T14:22:09.100935Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Tablet iPad Air 2022",
+    "description": "Tablet iPad Air 2022 - descripción de ejemplo con características únicas.",
+    "price": 377.5,
+    "stock": 100,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "10348ef57465d662c42cedc5"
+    },
+    "categories": [
+      "aventura"
+    ],
+    "tags": [
+      "rebaja",
+      "premium",
+      "oferta"
+    ],
+    "salesCount": 116,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "b03263311d0062f9c8ecb174"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-02-06T14:22:09.100955Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "afdb1e9695d45b4801194957"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-12-01T14:22:09.100962Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop Apple MacBook Pro 14 - descripción de ejemplo con características únicas.",
+    "price": 1960.37,
+    "stock": 184,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "3d8c7a31096913bccc11b3db"
+    },
+    "categories": [
+      "audio",
+      "aventura"
+    ],
+    "tags": [
+      "premium",
+      "limitado",
+      "nuevo"
+    ],
+    "salesCount": 259,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.5,
+    "reviews": []
+  },
+  {
+    "title": "Teclado Mecánico Logitech G Pro",
+    "description": "Teclado Mecánico Logitech G Pro - descripción de ejemplo con características únicas.",
+    "price": 308.84,
+    "stock": 110,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "b92d85530562c7424fb37d77"
+    },
+    "categories": [
+      "audio"
+    ],
+    "tags": [
+      "limitado"
+    ],
+    "salesCount": 114,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "7c475733e4a1d4f800df8ec7"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-03-21T14:22:09.100994Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "d10800641f0c035f66f0ed36"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-04-23T14:22:09.101001Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "42286c030f11527bdac4e18f"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-02-20T14:22:09.101007Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartphone Samsung Galaxy S23",
+    "description": "Smartphone Samsung Galaxy S23 - descripción de ejemplo con características únicas.",
+    "price": 1963.53,
+    "stock": 6,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "f302f6ed1bd9f0596f11e339"
+    },
+    "categories": [
+      "bebés",
+      "tecnología"
+    ],
+    "tags": [
+      "rebaja",
+      "limitado",
+      "oferta"
+    ],
+    "salesCount": 117,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.1,
+    "reviews": []
+  },
+  {
+    "title": "Monitor Dell UltraSharp 27",
+    "description": "Monitor Dell UltraSharp 27 - descripción de ejemplo con características únicas.",
+    "price": 648.51,
+    "stock": 125,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "cb1395550b56aaa9f62972d9"
+    },
+    "categories": [
+      "audio",
+      "accesorios"
+    ],
+    "tags": [
+      "premium",
+      "rebaja",
+      "nuevo"
+    ],
+    "salesCount": 120,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 4.9,
+    "reviews": []
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 237.12,
+    "stock": 30,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "8dccb8c37a839603a1208a12"
+    },
+    "categories": [
+      "jardinería",
+      "tecnología"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja"
+    ],
+    "salesCount": 294,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "f49ed8a24a231baf5172b50f"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-09-14T14:22:09.101067Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "fbb888cf0c3727d2a209b00a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2024-09-27T14:22:09.101075Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "00ab16850b4ed97442d27a11"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-08-14T14:22:09.101081Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 178.59,
+    "stock": 35,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "7aa284fe9345965ae6082d46"
+    },
+    "categories": [
+      "moda",
+      "tecnología"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja",
+      "premium"
+    ],
+    "salesCount": 326,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "f354b2b0748a4d87e1c9e8d9"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-01-08T14:22:09.101100Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 153.65,
+    "stock": 125,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "519499e61bf0ba32c8211be0"
+    },
+    "categories": [
+      "tecnología"
+    ],
+    "tags": [
+      "destacado",
+      "premium"
+    ],
+    "salesCount": 170,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "ac321eb3351b448af5c8b438"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-11-21T14:22:09.101119Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "e4488484eaef91cd3395da4f"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-09-07T14:22:09.101125Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "59ed5c0b0004c05a1b1c3fea"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-11-12T14:22:09.101131Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Monitor Dell UltraSharp 27",
+    "description": "Monitor Dell UltraSharp 27 - descripción de ejemplo con características únicas.",
+    "price": 1564.74,
+    "stock": 152,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "da148543941034d3d0be1ac7"
+    },
+    "categories": [
+      "accesorios",
+      "moda"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 441,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "93e2fe08e3b1557848e5ed29"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-10-08T14:22:09.101150Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 980.48,
+    "stock": 139,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "609b683a19f94fd342d539a7"
+    },
+    "categories": [
+      "electrodomésticos"
+    ],
+    "tags": [
+      "rebaja",
+      "premium"
+    ],
+    "salesCount": 462,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "6feb95d7ca6ad379e872b6f1"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-11-10T14:22:09.101169Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "5f326db289f03050db211013"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-12-02T14:22:09.101175Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 1118.13,
+    "stock": 70,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "dccf0e3e87e82f96f0a81020"
+    },
+    "categories": [
+      "moda"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 198,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.8,
+    "reviews": []
+  },
+  {
+    "title": "Teclado Mecánico Logitech G Pro",
+    "description": "Teclado Mecánico Logitech G Pro - descripción de ejemplo con características únicas.",
+    "price": 1007.8,
+    "stock": 123,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "3aa47d3036470b8b99cd5628"
+    },
+    "categories": [
+      "moda",
+      "calzado"
+    ],
+    "tags": [
+      "destacado",
+      "nuevo"
+    ],
+    "salesCount": 444,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 4.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3be633eb62130a0d75341633"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-04-09T14:22:09.101207Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "c31f32bafed2162b93822b48"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-03-02T14:22:09.101213Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 613.45,
+    "stock": 160,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fe8200663ef33ed7fa8ee0c6"
+    },
+    "categories": [
+      "oficina"
+    ],
+    "tags": [
+      "limitado",
+      "importado"
+    ],
+    "salesCount": 208,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 4.6,
+    "reviews": []
+  },
+  {
+    "title": "Mochila North Face Borealis",
+    "description": "Mochila North Face Borealis - descripción de ejemplo con características únicas.",
+    "price": 1252.97,
+    "stock": 18,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "1d0f91655ab4c507bbba713d"
+    },
+    "categories": [
+      "calzado"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja",
+      "oferta"
+    ],
+    "salesCount": 365,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 4.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "1d782e38314d076218c146b2"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-08-31T14:22:09.101243Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "bd5b9f499957cfea511104df"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-11-29T14:22:09.101249Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Silla Gamer Razer",
+    "description": "Silla Gamer Razer - descripción de ejemplo con características únicas.",
+    "price": 1356.82,
+    "stock": 148,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "c766eb9fe9c2a81081d03bf7"
+    },
+    "categories": [
+      "bebés",
+      "hogar"
+    ],
+    "tags": [
+      "rebaja",
+      "premium"
+    ],
+    "salesCount": 68,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "de9693a28b0410c746843dc4"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-05-06T14:22:09.101269Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Silla Gamer Razer",
+    "description": "Silla Gamer Razer - descripción de ejemplo con características únicas.",
+    "price": 467.02,
+    "stock": 77,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "3a1d6c6078d0429738fd7418"
+    },
+    "categories": [
+      "bebés",
+      "audio"
+    ],
+    "tags": [
+      "rebaja"
+    ],
+    "salesCount": 289,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "b1977d42ae48ad2200675154"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-05-28T14:22:09.101288Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Bicicleta Trek FX 3 Disc",
+    "description": "Bicicleta Trek FX 3 Disc - descripción de ejemplo con características únicas.",
+    "price": 1762.56,
+    "stock": 48,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "e1af4d1dafc00bd641d2fac4"
+    },
+    "categories": [
+      "tecnología",
+      "oficina"
+    ],
+    "tags": [
+      "nuevo",
+      "limitado"
+    ],
+    "salesCount": 480,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "6933eef7521d4dfbfc345f18"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-04-04T14:22:09.101319Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "d2c430c85197935be1455dcd"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-06-26T14:22:09.101326Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "35a74e748c8c7aecd6a1923a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-06-10T14:22:09.101332Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 1970.92,
+    "stock": 116,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "27f389af90c3ad115cf351f8"
+    },
+    "categories": [
+      "electrodomésticos",
+      "jardinería"
+    ],
+    "tags": [
+      "oferta",
+      "importado",
+      "destacado"
+    ],
+    "salesCount": 96,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "33a57c2f233b2dcf748c5f28"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-03-31T14:22:09.101350Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 1172.34,
+    "stock": 178,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "307eee15b02fc468b88edb30"
+    },
+    "categories": [
+      "calzado"
+    ],
+    "tags": [
+      "nuevo",
+      "limitado"
+    ],
+    "salesCount": 417,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "0be8868dd60135553f3c65e1"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-08-26T14:22:09.101377Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "10aadc06e8ef37688e196898"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-04-28T14:22:09.101387Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 1090.7,
+    "stock": 180,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "513e0485b0c539c10578dd83"
+    },
+    "categories": [
+      "calzado",
+      "gaming"
+    ],
+    "tags": [
+      "oferta",
+      "limitado",
+      "importado"
+    ],
+    "salesCount": 182,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.7,
+    "reviews": []
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 929.26,
+    "stock": 75,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "29662150b77b723cc60d98ad"
+    },
+    "categories": [
+      "deportes",
+      "calzado"
+    ],
+    "tags": [
+      "importado",
+      "destacado",
+      "nuevo"
+    ],
+    "salesCount": 321,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.8,
+    "reviews": []
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 1892.01,
+    "stock": 193,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "d960181c5ff41855db194b5d"
+    },
+    "categories": [
+      "bebés",
+      "aventura"
+    ],
+    "tags": [
+      "importado"
+    ],
+    "salesCount": 187,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3825e44d34404909b734c3a7"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-10-08T14:22:09.101431Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "e8cddb6e13531cb904a6df0a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2024-10-11T14:22:09.101437Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "7ffe9e569f97589e3db00e71"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-07-11T14:22:09.101443Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 1848.7,
+    "stock": 108,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "729f9db4dc630a1c245b56e5"
+    },
+    "categories": [
+      "electrodomésticos",
+      "jardinería"
+    ],
+    "tags": [
+      "premium",
+      "oferta",
+      "destacado"
+    ],
+    "salesCount": 282,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 5.0,
+    "reviews": []
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 557.3,
+    "stock": 61,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "96629d2ac114402201981dbd"
+    },
+    "categories": [
+      "gaming"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 359,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.3,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "8096441fb96474ce842c669b"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-07-09T14:22:09.101474Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "433fb665003b1bb328b6290e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2024-10-29T14:22:09.101480Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "1216aaba2632f438f17d1324"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-04-15T14:22:09.101487Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 1655.21,
+    "stock": 20,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "bc122f1611b60cff718bbd24"
+    },
+    "categories": [
+      "hogar",
+      "electrodomésticos"
+    ],
+    "tags": [
+      "premium",
+      "rebaja",
+      "destacado"
+    ],
+    "salesCount": 250,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.3,
+    "reviews": []
+  },
+  {
+    "title": "Monitor Dell UltraSharp 27",
+    "description": "Monitor Dell UltraSharp 27 - descripción de ejemplo con características únicas.",
+    "price": 1867.91,
+    "stock": 28,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "47eca373de77f06d125211b9"
+    },
+    "categories": [
+      "moda",
+      "gaming"
+    ],
+    "tags": [
+      "oferta",
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 395,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.1,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3cffd27afa6d9f7ae9075a03"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-04-17T14:22:09.101529Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Drone DJI Mini 3 Pro",
+    "description": "Drone DJI Mini 3 Pro - descripción de ejemplo con características únicas.",
+    "price": 1736.88,
+    "stock": 149,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "a85103d2e88a5616646770d0"
+    },
+    "categories": [
+      "jardinería"
+    ],
+    "tags": [
+      "oferta"
+    ],
+    "salesCount": 179,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3c8f0fccbfc5862387bae1f3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-07-11T14:22:09.101556Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartphone Samsung Galaxy S23",
+    "description": "Smartphone Samsung Galaxy S23 - descripción de ejemplo con características únicas.",
+    "price": 32.49,
+    "stock": 161,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "606c74693aea8f19e54fd8d6"
+    },
+    "categories": [
+      "aventura"
+    ],
+    "tags": [
+      "premium",
+      "oferta"
+    ],
+    "salesCount": 171,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "6dea6d058f96b8f9355d63a3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-09-25T14:22:09.101578Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "a6e2fdd59f088a3fbb437548"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-04-12T14:22:09.101585Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "f6e18a30f77d340f5ccec7b3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-09-07T14:22:09.101591Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 434.9,
+    "stock": 34,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "36ce3ea604ef76e1cb0cb46d"
+    },
+    "categories": [
+      "muebles",
+      "audio"
+    ],
+    "tags": [
+      "premium",
+      "limitado"
+    ],
+    "salesCount": 142,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.5,
+    "reviews": []
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 418.78,
+    "stock": 11,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "8c193d7c71b11538046eed2d"
+    },
+    "categories": [
+      "gaming"
+    ],
+    "tags": [
+      "rebaja",
+      "destacado"
+    ],
+    "salesCount": 45,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "25be660dc9e55c6c83ee7b49"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-05-31T14:22:09.101622Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "b4a0f53a5ad70714d0a95942"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-07T14:22:09.101628Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "715adcd66524653c666bfb9a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-03-17T14:22:09.101634Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 317.47,
+    "stock": 138,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0c9d03ccc943d44a4a540004"
+    },
+    "categories": [
+      "jardinería",
+      "audio"
+    ],
+    "tags": [
+      "oferta",
+      "premium",
+      "destacado"
+    ],
+    "salesCount": 26,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.9,
+    "reviews": []
+  },
+  {
+    "title": "Tablet iPad Air 2022",
+    "description": "Tablet iPad Air 2022 - descripción de ejemplo con características únicas.",
+    "price": 358.01,
+    "stock": 2,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fda986c02ef71bff8da5a147"
+    },
+    "categories": [
+      "audio",
+      "oficina"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 128,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.7,
+    "reviews": []
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 680.65,
+    "stock": 90,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "8ebcdcb0dc568a92743cf9cb"
+    },
+    "categories": [
+      "oficina",
+      "calzado"
+    ],
+    "tags": [
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 363,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.8,
+    "reviews": []
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 803.52,
+    "stock": 187,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "f39a772c1f1ae503c5f49049"
+    },
+    "categories": [
+      "bebés",
+      "aventura"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 83,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3a4db2f5cf09feed5e17a5b2"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-01-12T14:22:09.101690Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Teclado Mecánico Logitech G Pro",
+    "description": "Teclado Mecánico Logitech G Pro - descripción de ejemplo con características únicas.",
+    "price": 242.3,
+    "stock": 157,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "b65f3da39667bb3695ad3f06"
+    },
+    "categories": [
+      "aventura",
+      "electrodomésticos"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 116,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "7d190d3c2601af42fb81b52c"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-01-22T14:22:09.101708Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "943132650f52e0cdc133f670"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-04-16T14:22:09.101714Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 1061.75,
+    "stock": 109,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "cb9f54c69f053e59128531ca"
+    },
+    "categories": [
+      "accesorios"
+    ],
+    "tags": [
+      "oferta"
+    ],
+    "salesCount": 61,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "285a630bd31db5c76c1aa330"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-02-09T14:22:09.101732Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "97b9225c08dfa1b1794f0570"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-01-31T14:22:09.101738Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "90ec0cbfa54767888d5976f6"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-07-08T14:22:09.101744Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Microondas Panasonic Inverter",
+    "description": "Microondas Panasonic Inverter - descripción de ejemplo con características únicas.",
+    "price": 1241.45,
+    "stock": 103,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "b5e450994fe773752f7006a3"
+    },
+    "categories": [
+      "jardinería",
+      "deportes"
+    ],
+    "tags": [
+      "importado",
+      "destacado",
+      "premium"
+    ],
+    "salesCount": 45,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.9,
+    "reviews": []
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 401.71,
+    "stock": 62,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "7ecbb0fb1749ed6f4276faa1"
+    },
+    "categories": [
+      "gaming",
+      "deportes"
+    ],
+    "tags": [
+      "importado"
+    ],
+    "salesCount": 338,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.7,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "a2a125496aa3447b4032a93a"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-03-29T14:22:09.101775Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 549.65,
+    "stock": 184,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "cbf1de5221c41a0311b35154"
+    },
+    "categories": [
+      "electrodomésticos"
+    ],
+    "tags": [
+      "destacado"
+    ],
+    "salesCount": 37,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "6b304ff1f33b6ee9ba0f6471"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-11-10T14:22:09.101793Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "e33cb6cf5aa704454a741e84"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-07-17T14:22:09.101799Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "042a65f4cd191fa478988358"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-19T14:22:09.101805Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 1146.94,
+    "stock": 150,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "d5e9fc6414826cc5cec4546a"
+    },
+    "categories": [
+      "gaming",
+      "bebés"
+    ],
+    "tags": [
+      "destacado",
+      "nuevo"
+    ],
+    "salesCount": 401,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "d0f76b4ee44f73d3431f1046"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-09-20T14:22:09.101823Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "d0737c58c7d1261396d533ba"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-12-26T14:22:09.101829Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "29a7cce3742009fc43d03426"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-08-04T14:22:09.101874Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Mouse Gamer SteelSeries Rival 600",
+    "description": "Mouse Gamer SteelSeries Rival 600 - descripción de ejemplo con características únicas.",
+    "price": 731.22,
+    "stock": 71,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "56e99d6a6c6d629ed2e160c7"
+    },
+    "categories": [
+      "aventura",
+      "accesorios"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja",
+      "limitado"
+    ],
+    "salesCount": 337,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.3,
+    "reviews": []
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 1151.46,
+    "stock": 145,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "024141b5f1a8a0ca64380634"
+    },
+    "categories": [
+      "hogar",
+      "bebés"
+    ],
+    "tags": [
+      "premium"
+    ],
+    "salesCount": 250,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "f27542f1ce5f2bf4d0cd3c76"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-03-27T14:22:09.101920Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "a1deeb1b37daa93e816acae6"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-08-28T14:22:09.101927Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Drone DJI Mini 3 Pro",
+    "description": "Drone DJI Mini 3 Pro - descripción de ejemplo con características únicas.",
+    "price": 1824.89,
+    "stock": 87,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "c7cb72d31f0c90479e6cd1c6"
+    },
+    "categories": [
+      "calzado",
+      "aventura"
+    ],
+    "tags": [
+      "nuevo",
+      "premium"
+    ],
+    "salesCount": 239,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "49cb512c86872d42c23650eb"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-09-18T14:22:09.101946Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "ba09ee0164a886465eb2223d"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2024-11-22T14:22:09.101953Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "ce822cc25135f91d39c101f0"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-04-12T14:22:09.101960Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Smartwatch Garmin Forerunner 955",
+    "description": "Smartwatch Garmin Forerunner 955 - descripción de ejemplo con características únicas.",
+    "price": 587.24,
+    "stock": 182,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "6d3495431bde4ca7fc5ea0b7"
+    },
+    "categories": [
+      "tecnología"
+    ],
+    "tags": [
+      "importado",
+      "limitado",
+      "rebaja"
+    ],
+    "salesCount": 112,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "73f302500196083cd3b2c10d"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-01-16T14:22:09.101978Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Drone DJI Mini 3 Pro",
+    "description": "Drone DJI Mini 3 Pro - descripción de ejemplo con características únicas.",
+    "price": 235.75,
+    "stock": 77,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0389a8967679419ae78a4b7b"
+    },
+    "categories": [
+      "moda",
+      "gaming"
+    ],
+    "tags": [
+      "rebaja",
+      "nuevo"
+    ],
+    "salesCount": 307,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "079368530316a26e0954b85b"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-09-17T14:22:09.101997Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "3874e531391434203acf0879"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-01-06T14:22:09.102004Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "809f0fa53d07d6dd6587bfb9"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-10-18T14:22:09.102010Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Televisor LG OLED 55",
+    "description": "Televisor LG OLED 55 - descripción de ejemplo con características únicas.",
+    "price": 1433.82,
+    "stock": 84,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "8c729974090273cba991d81f"
+    },
+    "categories": [
+      "aventura",
+      "moda"
+    ],
+    "tags": [
+      "destacado"
+    ],
+    "salesCount": 25,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.7,
+    "reviews": []
+  },
+  {
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop Apple MacBook Pro 14 - descripción de ejemplo con características únicas.",
+    "price": 843.26,
+    "stock": 134,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "c568d07718edecb8a78e5cc0"
+    },
+    "categories": [
+      "hogar"
+    ],
+    "tags": [
+      "destacado",
+      "oferta",
+      "premium"
+    ],
+    "salesCount": 249,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.6,
+    "reviews": []
+  },
+  {
+    "title": "Mouse Gamer SteelSeries Rival 600",
+    "description": "Mouse Gamer SteelSeries Rival 600 - descripción de ejemplo con características únicas.",
+    "price": 1177.56,
+    "stock": 48,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "74dc494fe954c48cf6a60cc6"
+    },
+    "categories": [
+      "deportes",
+      "jardinería"
+    ],
+    "tags": [
+      "importado"
+    ],
+    "salesCount": 251,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.8,
+    "reviews": []
+  },
+  {
+    "title": "Zapatillas Nike Air Zoom Pegasus 40",
+    "description": "Zapatillas Nike Air Zoom Pegasus 40 - descripción de ejemplo con características únicas.",
+    "price": 509.29,
+    "stock": 161,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "def7d00c146c435c1f3e38d0"
+    },
+    "categories": [
+      "deportes"
+    ],
+    "tags": [
+      "oferta",
+      "rebaja"
+    ],
+    "salesCount": 157,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "ae57c7bea84ac8e3e036f717"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-08-20T14:22:09.102065Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "37c70b8a766a0c0d4bac4509"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-01-03T14:22:09.102071Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "4d6514f731b5afc09c80fc91"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-05-10T14:22:09.102077Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Mochila North Face Borealis",
+    "description": "Mochila North Face Borealis - descripción de ejemplo con características únicas.",
+    "price": 1182.0,
+    "stock": 184,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0960932214b63a5028da84a5"
+    },
+    "categories": [
+      "accesorios"
+    ],
+    "tags": [
+      "nuevo"
+    ],
+    "salesCount": 274,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "aeb07e0bba5b1d4e1e87d274"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-08-03T14:22:09.102096Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 1140.65,
+    "stock": 127,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "94700c28cd218d681a6fe1f2"
+    },
+    "categories": [
+      "oficina",
+      "aventura"
+    ],
+    "tags": [
+      "rebaja"
+    ],
+    "salesCount": 372,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.7,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "2c426b50bda4c2d155c02116"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-14T14:22:09.102114Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Teclado Mecánico Logitech G Pro",
+    "description": "Teclado Mecánico Logitech G Pro - descripción de ejemplo con características únicas.",
+    "price": 1663.11,
+    "stock": 184,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "fb2d7e3f01225142d8e228fb"
+    },
+    "categories": [
+      "calzado",
+      "muebles"
+    ],
+    "tags": [
+      "importado",
+      "nuevo"
+    ],
+    "salesCount": 245,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.8,
+    "reviews": []
+  },
+  {
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop Apple MacBook Pro 14 - descripción de ejemplo con características únicas.",
+    "price": 670.1,
+    "stock": 12,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "e97e25edc521266435740d50"
+    },
+    "categories": [
+      "muebles"
+    ],
+    "tags": [
+      "oferta"
+    ],
+    "salesCount": 115,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 1.2,
+    "reviews": []
+  },
+  {
+    "title": "Smartphone Samsung Galaxy S23",
+    "description": "Smartphone Samsung Galaxy S23 - descripción de ejemplo con características únicas.",
+    "price": 1961.77,
+    "stock": 18,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "197e83c457c4cd922f758453"
+    },
+    "categories": [
+      "electrodomésticos"
+    ],
+    "tags": [
+      "oferta",
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 402,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.2,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "f937dbd54ada33d81c580849"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-09-28T14:22:09.102157Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Silla Gamer Razer",
+    "description": "Silla Gamer Razer - descripción de ejemplo con características únicas.",
+    "price": 1455.05,
+    "stock": 173,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "6bed9cd1f1cc36c62335798a"
+    },
+    "categories": [
+      "deportes",
+      "oficina"
+    ],
+    "tags": [
+      "limitado",
+      "destacado",
+      "rebaja"
+    ],
+    "salesCount": 279,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.0,
+    "reviews": []
+  },
+  {
+    "title": "Cochecito Bebé Graco",
+    "description": "Cochecito Bebé Graco - descripción de ejemplo con características únicas.",
+    "price": 750.75,
+    "stock": 37,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "1356885cdffb60ba06a52480"
+    },
+    "categories": [
+      "audio",
+      "muebles"
+    ],
+    "tags": [
+      "oferta",
+      "destacado",
+      "premium"
+    ],
+    "salesCount": 204,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "3c54685178ed4b987daa2876"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-06-12T14:22:09.102189Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "4d7ff5833090ecdeb6a3263b"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2024-10-05T14:22:09.102195Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cafetera Espresso DeLonghi",
+    "description": "Cafetera Espresso DeLonghi - descripción de ejemplo con características únicas.",
+    "price": 768.19,
+    "stock": 58,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "5244d288395ab41b0af40d7e"
+    },
+    "categories": [
+      "jardinería",
+      "moda"
+    ],
+    "tags": [
+      "oferta"
+    ],
+    "salesCount": 176,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.6,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "7e640097e4c45bdf7874fde1"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-01-18T14:22:09.102213Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "924f282ed2c572f40d59986e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-02T14:22:09.102219Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "6fbac6c40ed36d863af285a6"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-07-15T14:22:09.102225Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Licuadora Oster Pro 1200",
+    "description": "Licuadora Oster Pro 1200 - descripción de ejemplo con características únicas.",
+    "price": 1678.05,
+    "stock": 23,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "267ce24790f39e3365c63e9b"
+    },
+    "categories": [
+      "moda"
+    ],
+    "tags": [
+      "oferta",
+      "rebaja",
+      "importado"
+    ],
+    "salesCount": 400,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 2.1,
+    "reviews": []
+  },
+  {
+    "title": "Laptop Apple MacBook Pro 14",
+    "description": "Laptop Apple MacBook Pro 14 - descripción de ejemplo con características únicas.",
+    "price": 113.66,
+    "stock": 163,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "92748eebc51cf2267acbe6eb"
+    },
+    "categories": [
+      "aventura"
+    ],
+    "tags": [
+      "nuevo",
+      "oferta"
+    ],
+    "salesCount": 373,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "cf790f58f240847e04ca0606"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-06T14:22:09.102256Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "30a20c26f68ac8d2c234dc89"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-12-26T14:22:09.102263Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Licuadora Oster Pro 1200",
+    "description": "Licuadora Oster Pro 1200 - descripción de ejemplo con características únicas.",
+    "price": 377.46,
+    "stock": 151,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "74b7545bf378a1db5ee5ecbe"
+    },
+    "categories": [
+      "tecnología"
+    ],
+    "tags": [
+      "oferta",
+      "rebaja",
+      "premium"
+    ],
+    "salesCount": 320,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 4.8,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "252d1e1242ac3bea4d62aab3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2024-10-29T14:22:09.102282Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "834ba7bfe030fba0bb8f9f60"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-08-22T14:22:09.102288Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 1549.11,
+    "stock": 124,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "dc568ff807d2bf5e7406fc96"
+    },
+    "categories": [
+      "aventura",
+      "oficina"
+    ],
+    "tags": [
+      "destacado",
+      "importado"
+    ],
+    "salesCount": 217,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 1.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "44447faaffc01109439255dd"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-02-25T14:22:09.102306Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Silla Gamer Razer",
+    "description": "Silla Gamer Razer - descripción de ejemplo con características únicas.",
+    "price": 334.41,
+    "stock": 42,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "d168008f12b0f6ce873e4f66"
+    },
+    "categories": [
+      "calzado",
+      "aventura"
+    ],
+    "tags": [
+      "rebaja",
+      "destacado",
+      "premium"
+    ],
+    "salesCount": 177,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.1,
+    "reviews": []
+  },
+  {
+    "title": "Cámara Canon EOS R7",
+    "description": "Cámara Canon EOS R7 - descripción de ejemplo con características únicas.",
+    "price": 288.44,
+    "stock": 23,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "6f4033a4396f788529ac2784"
+    },
+    "categories": [
+      "muebles",
+      "calzado"
+    ],
+    "tags": [
+      "importado",
+      "premium"
+    ],
+    "salesCount": 188,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 2.9,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "c0c76dbb9ad02b61039d4dbb"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 3,
+        "date": {
+          "$date": "2025-05-16T14:22:09.102337Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "ab8bfecadf868a301e240ba7"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-05-25T14:22:09.102343Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Auriculares Sony WH-1000XM5",
+    "description": "Auriculares Sony WH-1000XM5 - descripción de ejemplo con características únicas.",
+    "price": 1305.86,
+    "stock": 61,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "0f840ba357ccec7daecfddce"
+    },
+    "categories": [
+      "deportes"
+    ],
+    "tags": [
+      "premium"
+    ],
+    "salesCount": 276,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.5,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "4d587d8afe8680930e03d9f1"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 2,
+        "date": {
+          "$date": "2025-09-01T14:22:09.102364Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Monitor Dell UltraSharp 27",
+    "description": "Monitor Dell UltraSharp 27 - descripción de ejemplo con características únicas.",
+    "price": 30.5,
+    "stock": 70,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "705602fa35d33c207fbff2e6"
+    },
+    "categories": [
+      "hogar"
+    ],
+    "tags": [
+      "importado"
+    ],
+    "salesCount": 490,
+    "isActive": true,
+    "isVisible": true,
+    "featured": true,
+    "ratingAverage": 3.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "7171c2270d9785a5860e1985"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-11-06T14:22:09.102398Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "ed46a719615c493c0093371c"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-05-01T14:22:09.102410Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Parlante JBL Charge 5",
+    "description": "Parlante JBL Charge 5 - descripción de ejemplo con características únicas.",
+    "price": 1923.71,
+    "stock": 80,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "31e72e1978544c271e76d30a"
+    },
+    "categories": [
+      "jardinería",
+      "gaming"
+    ],
+    "tags": [
+      "limitado",
+      "destacado"
+    ],
+    "salesCount": 77,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 3.1,
+    "reviews": []
+  },
+  {
+    "title": "Licuadora Oster Pro 1200",
+    "description": "Licuadora Oster Pro 1200 - descripción de ejemplo con características únicas.",
+    "price": 456.23,
+    "stock": 83,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "7eee6335b3e0c9e5e489bf8b"
+    },
+    "categories": [
+      "gaming"
+    ],
+    "tags": [
+      "destacado",
+      "premium",
+      "oferta"
+    ],
+    "salesCount": 201,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 5.0,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "d0c731c402a8d03c5f92cfbb"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-07-24T14:22:09.102463Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "e0b425fb2aa0daeb3209fd9e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2025-04-08T14:22:09.102473Z"
+        }
+      }
+    ]
+  },
+  {
+    "title": "Cafetera Espresso DeLonghi",
+    "description": "Cafetera Espresso DeLonghi - descripción de ejemplo con características únicas.",
+    "price": 1139.76,
+    "stock": 156,
+    "images": [
+      "https://picsum.photos/400/300",
+      "https://picsum.photos/400/300"
+    ],
+    "seller": {
+      "$oid": "2d901221becb938b8069db02"
+    },
+    "categories": [
+      "muebles",
+      "electrodomésticos"
+    ],
+    "tags": [
+      "nuevo",
+      "rebaja"
+    ],
+    "salesCount": 459,
+    "isActive": true,
+    "isVisible": true,
+    "featured": false,
+    "ratingAverage": 4.4,
+    "reviews": [
+      {
+        "user": {
+          "$oid": "04f25fa9f0b9659826e645dd"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 4,
+        "date": {
+          "$date": "2025-03-24T14:22:09.102492Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "b4a0c8bb027ea533f639e14e"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 5,
+        "date": {
+          "$date": "2024-11-29T14:22:09.102498Z"
+        }
+      },
+      {
+        "user": {
+          "$oid": "cb5b68556802a36f518ba9d3"
+        },
+        "comment": "Comentario de ejemplo.",
+        "rating": 1,
+        "date": {
+          "$date": "2025-01-06T14:22:09.102504Z"
+        }
+      }
+    ]
+  }
+]

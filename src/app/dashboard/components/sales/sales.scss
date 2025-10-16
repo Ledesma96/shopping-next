@@ -1,0 +1,58 @@
+@use '../../../constants' as c;
+.container-graphic {
+    background: #fff;
+    border-radius: 12px;
+    padding: 1rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+    width: 100%;
+    max-width: 800px;
+    margin: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    .container-title{
+        display: block;
+        margin: 0 auto;
+        p{
+            font-size: 1.3rem;
+            font-weight: 700;
+        }
+    }
+    .filter-bar {
+        margin-right: 8px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-end;
+        gap: 0.5rem;
+        label {
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: c.$text-color;
+        }
+        select {
+            padding: 0.4rem 0.8rem;
+            border-radius: 8px;
+            border: 1px solid #ccc;
+            background: c.$background-color;
+            font-size: 0.9rem;
+            font-weight: 500;
+            color: #333;
+            cursor: pointer;
+            transition: all 0.2s ease;
+
+            &:hover {
+                border-color: c.$primary-color;
+            }
+
+            &:focus {
+                outline: none;
+                border-color: c.$primary-color;
+                box-shadow: 0 0 0 3px rgba(108, 99, 255, 0.2);
+            }
+        }
+    }
+}
+
+.recharts-legend-wrapper {
+    font-size: 0.8rem;
+}

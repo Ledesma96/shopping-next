@@ -1,3 +1,4 @@
+@use "sass:color";
 @use "../../../constants" as c;
 .add-product-form {
     background-color: c.$background-color;
@@ -27,7 +28,7 @@
         transition: background-color 0.3s ease;
 
         &:hover {
-            background-color: darken(c.$secondary-color, 10%);
+            background-color: color.adjust(c.$secondary-color, $lightness: -10%);
         }
     }
 }

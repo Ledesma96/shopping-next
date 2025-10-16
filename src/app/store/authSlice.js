@@ -1,19 +1,24 @@
 // store/authSlice.js
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import api from '../api/api.config';
+import axios from 'axios';
+const api = axios.create({
+    baseURL: 'http://localhost:3000',
+    withCredentials: true,
+});
+
 
 export const fetchUser = createAsyncThunk(
     'auth/fetchUser',
     async (_, { rejectWithValue }) => {
         try {
-        const response = await api.get('http://localhost:3000/api/v1/users/me');
-        
-        return response.data;
+            const response = await api.get('/api/v1/users/me');
+            return response.data;
         } catch (error) {
-        return rejectWithValue(null);
+            return rejectWithValue(error.response?.data || null);
         }
     }
 );
+
 
 const authSlice = createSlice({
     name: 'auth',

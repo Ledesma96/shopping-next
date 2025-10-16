@@ -1,36 +1,46 @@
 'use client';
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import { FaStar } from "react-icons/fa";
+import { createReview, getReview } from "../../../../api/review.api";
 import './reviews.scss';
 
-const Reviews = () => {
-    const exampleReviews = [
-        { name: "Mariana", rating: 5, comment: "¡Excelente calidad, llegó en tiempo y forma!" },
-        { name: "Carlos", rating: 4, comment: "Muy buena relación precio-calidad." },
-        { name: "Laura", rating: 3, comment: "La tela es un poco más fina de lo que esperaba, pero cómoda." },
-    ];
-
-    const [reviews, setReviews] = useState(exampleReviews);
-    const [newReview, setNewReview] = useState({ rating: 0, comment: '' });
+const Reviews = ({id}) => {
+    const [reviews, setReviews] = useState([]);
+    const [newReview, setNewReview] = useState({product: '', rating: 0, comment: '' });
 
     const handleChange = (e) => {
         setNewReview({ ...newReview, comment: e.target.value });
     };
 
-    const handleSubmit = (e) => {
+    const handleSubmit = async(e) => {
         e.preventDefault();
         if (newReview.rating > 0 && newReview.comment.trim()) {
-        setReviews([{ name: 'Anónimo', ...newReview }, ...reviews]);
-        setNewReview({ rating: 0, comment: '' });
+            const result = await createReview({...newReview, product: id});
+            if(result){
+                setReviews([{ name: 'Anónimo', ...newReview }, ...reviews]);
+                setNewReview({ rating: 0, comment: '' });
+            }
         }
     };
+
+    useEffect(() => {
+        const fetchReviews = async() => {
+            try {
+                    const result = await getReview(id);
+                    setReviews(result)
+            } catch (error) {
+                console.log(error);
+            }
+        }
+        if(id) fetchReviews();
+    }, [id])
 
     return (
         <section className="reviews-container">
         <h3 className="reviews-container__title">Reseñas del producto</h3>
 
         <div className="reviews-container__list">
-            {reviews.length > 0 ? (
+            {reviews?.length > 0 ? (
             reviews.map((review, index) => (
                 <div key={index} className="reviews-container__item">
                     <div className="reviews-container__header">

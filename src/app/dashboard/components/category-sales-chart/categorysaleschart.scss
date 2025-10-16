@@ -1,0 +1,15 @@
+.container{
+    background-color: white;
+    margin-top: 16px;
+    width: 100%;
+    height: auto;
+    display: flex;
+    flex-direction: column;
+    padding: 0;
+    .title{
+        margin-top: 8px;
+        margin-left: 16px;
+        font-size: 1.3rem;
+        font-weight: 700;
+    }
+}
