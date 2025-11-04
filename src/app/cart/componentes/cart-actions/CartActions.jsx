@@ -2,9 +2,16 @@
 import React from 'react'
 import { Button, Typography, Divider } from '@mui/material'
 import './cartActions.scss'
+import { useDispatch, useSelector } from 'react-redux'
+import { clearCart } from '../../../store/cartSlice'
 
-const CartActions = ({ total }) => {
-    const onClearCart = () => {}
+const CartActions = () => {
+    const { totalPrice } = useSelector(state => state.cart)
+    const dispatch = useDispatch();
+
+    const onClearCart = () => {
+        dispatch(clearCart())
+    }
     const onCheckout = () => {}
     return (
         <div className="cart-actions">
@@ -15,7 +22,7 @@ const CartActions = ({ total }) => {
                 Total:
                 </Typography>
                 <Typography variant="h6" className="total-amount">
-                ${total.toLocaleString()}
+                ${totalPrice.toLocaleString()}
                 </Typography>
             </div>
 

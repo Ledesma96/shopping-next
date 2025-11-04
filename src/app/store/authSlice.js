@@ -1,37 +1,44 @@
-// store/authSlice.js
-import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
-import axios from 'axios';
+import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
+import axios from "axios";
+import storage from "redux-persist/lib/storage";
+
 const api = axios.create({
-    baseURL: 'http://localhost:3000',
-    withCredentials: true,
+  baseURL: "http://localhost:3000",
+  withCredentials: true,
 });
 
-
+// 🔹 Obtener usuario autenticado
 export const fetchUser = createAsyncThunk(
-    'auth/fetchUser',
+    "auth/fetchUser",
     async (_, { rejectWithValue }) => {
         try {
-            const response = await api.get('/api/v1/users/me');
-            return response.data;
+        const response = await api.get("/api/v1/users/me");
+        return response.data;
         } catch (error) {
-            return rejectWithValue(error.response?.data || null);
+        return rejectWithValue(error.response?.data || null);
         }
     }
 );
 
+// 🔹 Cerrar sesión (elimina cookie en el servidor)
+export const logoutUser = createAsyncThunk("auth/logoutUser", async () => {
+    try {
+        await api.post("/api/v1/auth/logout"); // tu endpoint de logout del backend
+        await storage.removeItem("persist:root"); // limpia storage local
+        return true;
+    } catch (error) {
+        console.error("Error al cerrar sesión:", error);
+        return false;
+    }
+});
 
 const authSlice = createSlice({
-    name: 'auth',
+    name: "auth",
     initialState: {
         user: null,
         loading: true,
     },
-    reducers: {
-        logout(state) {
-        state.user = null;
-        state.loading = false;
-        },
-    },
+    reducers: {},
     extraReducers: (builder) => {
         builder
         .addCase(fetchUser.pending, (state) => {
@@ -44,9 +51,13 @@ const authSlice = createSlice({
         .addCase(fetchUser.rejected, (state) => {
             state.user = null;
             state.loading = false;
+        })
+        // 🔹 Manejo del logout
+        .addCase(logoutUser.fulfilled, (state) => {
+            state.user = null;
+            state.loading = false;
         });
     },
 });
 
-export const { logout } = authSlice.actions;
 export default authSlice.reducer;

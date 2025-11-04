@@ -4,6 +4,7 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getProducts } from "../../../../api/product.api";
 import ProductCard from "../../../modules/product-card/ProductCard";
 import './productSection.scss';
+import axios from "axios";
 
 const ProductSection = ({ title, find }) => {
     const [products, setProducts] = useState([]);
@@ -11,10 +12,21 @@ const ProductSection = ({ title, find }) => {
     const [translate, setTranslate] = useState(0);
     const ref = useRef();
 
+    //para obtener los productos de la db
+    // useEffect(() => {
+    //   const fetchProducts = async() => {
+    //     const result = await getProducts(find);
+    //     setProducts(result.products)
+    //   }
+    //   fetchProducts()
+    // }, [])
+
+    //productos de json
     useEffect(() => {
-      const fetchProducts = async() => {
-        const result = await getProducts(find);
-        setProducts(result.products)
+      const fetchProducts = async () => {
+        const result = await axios.get('/products.json');
+        const filter = result.data.filter(p => p.categories == find)
+        setProducts(filter)
       }
       fetchProducts()
     }, [])
@@ -22,7 +34,7 @@ const ProductSection = ({ title, find }) => {
     useEffect(() => {
         if (products.length > 0) {
             setStyles({
-                width: `${products.length * 286}px`
+                width: `${products.length * 200}px`
             });
         }
     }, [products]);
@@ -35,10 +47,9 @@ const ProductSection = ({ title, find }) => {
       const totalWidth = container.scrollWidth;
       const maxTranslate = totalWidth - containerWidth;
       const newTranslate = translate + window.innerWidth * 0.9;
-      console.log(totalWidth, containerWidth);
       
       if (newTranslate >= maxTranslate) {
-        setTranslate(maxTranslate); // stop at end
+        setTranslate(maxTranslate);
       } else {
         setTranslate(newTranslate);
       }
@@ -56,8 +67,6 @@ const ProductSection = ({ title, find }) => {
       } else {
         setTranslate(newTranslate);
       }
-      console.log(translate);
-      
     };
     return (
         <section className="product-section" ref={ref}>

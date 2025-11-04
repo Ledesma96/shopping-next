@@ -49,9 +49,7 @@ const page = () => {
             <CartHeader />
             <CartItem cartItems={cartItems}/>
             {cartItems.length > 0 ?
-                    <CartActions
-                        total={cartItems.reduce((sum, item) => sum + item.price * item.quantity, 0)}
-                    />
+                    <CartActions/>
                 :
                     <CartEmpty />
             }

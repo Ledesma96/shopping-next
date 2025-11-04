@@ -1,3 +1,5 @@
 import Send from "./send/Send";
+import Payment from "./payment/Payment";
+import Actions from "./actions/Actions";
 
-export {Send}
+export {Send, Payment, Actions}

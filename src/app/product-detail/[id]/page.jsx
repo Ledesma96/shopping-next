@@ -2,7 +2,8 @@
 import { useParams } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
 import { getProductById } from '../../api/product.api'
-import { AnswerAndQuestion, Details, Gallery, Reviews } from './components'
+import { AnswerAndQuestion, Details, Gallery, Header, Reviews } from './components'
+import axios from 'axios'
 
 const Page = () => {
     const [product, setProduct] = useState(null);
@@ -12,12 +13,13 @@ const Page = () => {
     useEffect(() => {
         const fetchProduct = async () => {
             try {
-                const result = await getProductById(id);
-                if (!result.success) {
+                // const result = await getProductById(id);
+                const result = await axios.get('/products.json');
+                if (!result.data) {
                     console.log('No se consiguió el producto');
                     return;
                 }
-                setProduct(result.product);
+                setProduct(result.data[1]);
             } catch (error) {
                 console.error('Error al obtener el producto:', error.message);
             } finally {
@@ -41,6 +43,7 @@ const Page = () => {
 
     return (
         <div>
+            <Header product={product}/>
             <Gallery images={product.images} />
             <Details product={product} />
             <AnswerAndQuestion />

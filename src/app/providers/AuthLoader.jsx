@@ -8,7 +8,6 @@ const AuthLoader = () => {
     useEffect(() => {
         const fetchUserData = async() => {
             const user = await dispatch(fetchUser());
-            console.log(user);
         }
         fetchUserData();
     }, [])

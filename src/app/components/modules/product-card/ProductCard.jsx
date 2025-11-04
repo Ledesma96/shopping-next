@@ -7,7 +7,6 @@ import './productCard-styles.scss';
 const ProductCard = ({product}) => {
     return (
         <Link href={`/product-detail/${product._id}`} className="product-card">
-            <CiHeart className={`${product.tags.includes('favoritos') ? "favorite" : ''} product-card__favorite`}/>
             <div className='product-card__container-img'>
                 <Image
                     fill

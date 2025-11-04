@@ -1,22 +1,25 @@
 'use client'
 import axios from 'axios';
-import { useParams } from 'next/navigation'
+import { useRouter, useSearchParams } from 'next/navigation'
 import React, { useEffect, useState, useRef, useCallback } from 'react'
-import { ProductCard } from '../../../../components';
+import { ProductCard } from '../../../components';
 import './productsList.scss'
 import { Filters } from './components';
 import { PacmanLoader } from "react-spinners";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../../../store/cartSlice';
 
 const ProductsList = () => {
-    const params = useParams();
-    const query = params.query;
+    const dispatch = useDispatch();
+    const searchParams = useSearchParams()
+    const search = searchParams.get('search')
 
     const [products, setProducts] = useState([]);
     const [filtersArray, setFiltersArray] = useState([]);
     const [page, setPage] = useState(1);
     const [loading, setLoading] = useState(false);
     const [hasMore, setHasMore] = useState(true);
-
+    
     const observer = useRef();
 
     // Claves que realmente queremos usar como filtros
@@ -32,21 +35,30 @@ const ProductsList = () => {
     const fetchProducts = async (pageNum) => {
         setLoading(true);
         try {
-            // Simulamos paginación (products.json debería soportar ?page y ?limit en backend real)
+            // Simulación de paginación
             const result = await axios.get('/products.json');
-            if (!result) return;
-
-            // Supongamos que "products.json" trae todo, entonces simulamos lotes
+            if (!result.data) return;
+    
+            const filtered = result.data.filter(p =>
+                search
+                    ? p.title.toLowerCase().includes(search.trim().toLowerCase())
+                    : true
+            );
+    
             const limit = 20;
             const start = (pageNum - 1) * limit;
             const end = start + limit;
-
-            const newProducts = result.data.slice(start, end);
-
-            setProducts((prev) => [...prev, ...newProducts]);
-
-            // Si no hay más productos, cortamos el scroll
-            if (newProducts.length < limit) {
+    
+            // Cortamos el array según la página
+            const newProducts = filtered.slice(start, end);
+    
+            // Si es la primera página, reemplazamos; si no, concatenamos
+            setProducts((prev) =>
+                pageNum === 1 ? newProducts : [...prev, ...newProducts]
+            );
+    
+            // Si ya no hay más productos, deshabilitamos el scroll infinito
+            if (newProducts.length < limit || end >= filtered.length) {
                 setHasMore(false);
             }
         } catch (err) {
@@ -55,13 +67,14 @@ const ProductsList = () => {
             setLoading(false);
         }
     };
+    
 
     useEffect(() => {
         setProducts([]);
         setPage(1);
         setHasMore(true);
         fetchProducts(1);
-    }, [query]);
+    }, [search]);
 
     // Genera filtros importantes de manera dinámica
     useEffect(() => {
@@ -124,6 +137,9 @@ const ProductsList = () => {
         fetchProducts(page);
     }, [page]);
 
+    const addProductToCart = (index, price, quantity) => {
+        dispatch(addToCart({_id: index, price, quantity}))
+    }
     return (
         <main className='container-views'>
             <Filters filters={filtersArray} />
@@ -140,7 +156,7 @@ const ProductsList = () => {
                     return (
                         <div className='container-card' key={i}>
                             <ProductCard product={product} />
-                            <button className='add-to-cart-btn'>Agregar al carrito</button>
+                            <button className='add-to-cart-btn' onClick={() => addProductToCart(i, product.price, 1)}>Agregar al carrito</button>
                         </div>
                     );
                 }

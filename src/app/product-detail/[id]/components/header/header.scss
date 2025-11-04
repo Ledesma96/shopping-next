@@ -1,0 +1,22 @@
+@use '../../../../constants' as c;
+.container-header{
+    width: 90%;
+    margin: 16px auto;
+    margin-bottom: 32px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    .title{
+        font-size: 1.3rem;
+    }
+    .container-heart{
+        width: 35px;
+        height: 35px;
+        border-radius: 50%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: white;
+    }
+}

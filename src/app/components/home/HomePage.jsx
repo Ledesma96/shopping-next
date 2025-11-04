@@ -8,9 +8,9 @@ const HomePage = () => {
             <CarouselSlider />
             <Shipments icon={<FaTruckFast />} text={'Envios a todo el pais'}/>
             <Categories />
-            <ProductSection title="Favoritos" find={'favoritos'} />
-            <ProductSection title="Accesorios para Celulares" find={{category: 'Accesorios para Celulares'}} />
-            <ProductSection title="Novedades" find={'ropa'} />
+            <ProductSection title="Favoritos" find={'belleza'} />
+            <ProductSection title="Accesorios para Celulares" find={'jardinería'} />
+            <ProductSection title="Novedades" find={'moda'} />
         </>
     )
 }

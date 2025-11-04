@@ -2,6 +2,7 @@
 @use '../../constants' as c;
 
 .footer {
+  margin-top: 16px;
   background-color: c.$background-color;
   color: c.$text-color;
   font-family: 'Helvetica', sans-serif;

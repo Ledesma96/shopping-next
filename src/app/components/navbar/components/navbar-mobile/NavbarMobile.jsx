@@ -1,7 +1,7 @@
 import Image from "next/image";
 import { Menu, Profile } from "./components";
 import './navbarMobile.scss';
-import Search from "../shared/Search";
+import { Cart, Search } from "../shared";
 
 const NavbarMobile = () => {
     return (
@@ -15,8 +15,9 @@ const NavbarMobile = () => {
             </div>
             <Search />
             <div className="header-actions">
+                <Cart />
                 <Menu />
-                <Profile />
+                {/* <Profile /> */}
             </div>
         </nav>
     )

@@ -1,0 +1,179 @@
+@use '../../../constants' as c;
+
+.section-payment {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 20px;
+
+    h3 {
+        margin-left: 16px;
+        font-size: 1.2rem;
+        font-weight: 600;
+    }
+}
+
+.payment-methods {
+    width: 100%;
+    height: 45px;
+    display: flex;
+    background-color: white;
+    border-bottom: 0.5px solid c.$border-color;
+
+    .payment-option {
+        position: relative;
+        width: 50%;
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+
+        input[type='radio'] {
+            margin-left: 16px;
+            accent-color: c.$primary-color;
+        }
+
+        span {
+        font-weight: 500;
+        color: #333;
+        }
+    }
+    .payment-option:nth-child(2)::before{
+        content: "";
+        position: absolute;
+        width: 0.5px;
+        height: 100%;
+        top: 0;
+        left: 0;
+        background-color: c.$border-color;
+    }
+}
+
+.cards-container {
+    width: 95%;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+
+    .card-item {
+        display: flex;
+        align-items: flex-start;
+        gap: 12px;
+        padding: 14px;
+        border: 1px solid rgba(0,0,0,0.15);
+        border-radius: 12px;
+        transition: all 0.25s ease;
+        cursor: pointer;
+
+        &:hover {
+        border-color: c.$accent-color;
+        box-shadow: 0 4px 12px rgba(c.$accent-color, 0.25);
+        }
+
+        input[type='radio'] {
+        margin-top: 4px;
+        accent-color: c.$primary-color;
+        }
+
+        .card-info {
+            .brand {
+                font-weight: 600;
+                color: #222;
+            }
+            .details {
+                font-family: monospace;
+                font-size: 0.9rem;
+                color: #444;
+            }
+            .holder {
+                color: #666;
+                font-size: 0.85rem;
+            }
+        }
+    }
+
+    .add-card {
+        display: flex;
+        align-items: center;
+        gap: 8px;
+        padding: 12px;
+        border: 1px dashed c.$accent-color;
+        border-radius: 12px;
+        color: c.$accent-color;
+        cursor: pointer;
+        transition: all 0.2s ease;
+
+        &:hover {
+        background-color: rgba(c.$accent-color-hover, 0.1);
+        border-color: c.$accent-color-hover;
+        color: c.$accent-color-hover;
+        transform: translateY(-2px);
+        }
+
+        svg {
+        stroke-width: 1;
+        }
+    }
+
+    .form-add-card {
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        margin-top: 12px;
+        padding: 16px;
+        border: 1px solid rgba(0,0,0,0.15);
+        border-radius: 12px;
+        background-color: #fafafa;
+
+        input {
+            padding: 8px 12px;
+            border: 1px solid rgba(0,0,0,0.2);
+            border-radius: 8px;
+            font-size: 0.9rem;
+            outline: none;
+            transition: c.$border-color 0.2s ease;
+
+            &:focus {
+                border-color: c.$accent-color;
+            }
+        }
+
+        .form-row {
+            display: flex;
+            gap: 10px;
+            input{
+                width: 50%;
+            }
+        }
+
+        button {
+            padding: 10px;
+            border: none;
+            border-radius: 8px;
+            background-color: c.$primary-color;
+            color: #fff;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background-color 0.2s ease;
+
+            &:hover {
+                background-color: c.$primary-color-hover;
+            }
+        }
+        .cancel{
+            background-color: c.$accent-color;
+            &:hover {
+                background-color: c.$accent-color-hover;
+            }
+        }
+    }
+}
+
+.cash-info {
+    background-color: #fafafa;
+    border: 1px solid rgba(0,0,0,0.15);
+    border-radius: 12px;
+    padding: 14px;
+    font-size: 0.95rem;
+    color: #444;
+}

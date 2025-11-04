@@ -1,10 +1,12 @@
 import React from 'react'
-import { Send } from './components'
+import { Actions, Payment, Send } from './components'
 
 const page = () => {
     return (
         <div>
             <Send />
+            <Payment />
+            <Actions />
         </div>
     )
 }

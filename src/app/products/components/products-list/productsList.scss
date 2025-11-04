@@ -1,5 +1,7 @@
-@use '../../../../constants' as c;
+@use '../../../constants' as c;
 .container-views{
+    position: relative;
+    padding-bottom: 40px;
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
@@ -41,5 +43,11 @@
                 box-shadow: 0 3px 5px rgba(0, 0, 0, 0.15);
             }
         }
+    }
+    .end-message{
+        position: absolute;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
     }
 }
