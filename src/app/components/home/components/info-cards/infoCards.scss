@@ -1,0 +1,80 @@
+@use "../../../../constants" as c;
+
+.promoCards{
+    width: 100%;
+    &__grid{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        .promoCards__card{
+            margin-top: 16px;
+            position: relative;
+            width: 90%;
+            height: 200px;
+            .promoCards__img {
+                object-fit: cover;
+            }
+            .promoCards__overlay {
+                position: absolute;
+                bottom: 0;
+                width: 100%;
+                padding: 1rem;
+                color: white;
+                backdrop-filter: blur(4px);
+                background: linear-gradient(
+                    to top,
+                    rgba(0, 0, 0, 0.6),
+                    rgba(0, 0, 0, 0)
+                );
+
+                h3 {
+                    margin: 0;
+                    font-size: 1.2rem;
+                    font-weight: 600;
+                }
+
+                p {
+                    margin: .3rem 0 0;
+                    font-size: .9rem;
+                    color: #eaeaea;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (width >= 1024) {
+    .promoCards{
+        .promoCards__grid {
+            margin: 0 auto;
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 16px;              // 🔥 Maneja el espacio ENTRE cards
+            width: 95%;
+
+            .promoCards__card {
+                width: 100%;          // 🔥 Ocupa SIEMPRE el ancho exacto del contenedor
+                height: 250px;
+                border-radius: 8px;
+                overflow: hidden;
+            }
+
+            .promoCards__card:nth-child(1) {
+                grid-column: 1 / span 1;
+                grid-row: 1;
+            }
+
+            .promoCards__card:nth-child(2) {
+                grid-column: 2 / span 1;
+                grid-row: 1;
+            }
+
+            .promoCards__card--large {
+                grid-column: 1 / span 2;    // 🔥 Ocupa TODO EL ANCHO
+                grid-row: 2;
+                height: 260px;
+            }
+        }
+    }
+}

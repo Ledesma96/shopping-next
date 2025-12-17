@@ -27,3 +27,4 @@ export const CATEGORY_LIST = [
     "Papelería",
     "Mascotas",
 ];
+

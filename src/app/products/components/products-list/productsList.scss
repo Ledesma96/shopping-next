@@ -51,3 +51,15 @@
         transform: translateX(-50%);
     }
 }
+
+@media screen and (width >= 1024) {
+    .container-views{
+        width: 75%;
+        margin-left: 25%;
+        .container-card:hover{
+            transform: translateY(-3px);
+            box-shadow: 1px 1px 1px 0px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease-out;
+        }
+    }
+}

@@ -1,0 +1,10 @@
+@use '../../../../constants' as c;
+.container-navbar{
+    padding: 8px 0px;
+    position: relative;
+    width: 100%;
+    background-color: c.$primary-color;
+    display: grid;
+    grid-template-columns: 0.2fr 1fr 0.2fr;
+    grid-template-rows: 1fr 0.2fr;
+}

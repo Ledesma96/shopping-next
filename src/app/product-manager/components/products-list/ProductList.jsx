@@ -77,6 +77,7 @@ const ProductList = () => {
                 <th>Stock</th>
                 <th>Estado</th>
                 <th>Acciones</th>
+                <th></th>
               </tr>
             </thead>
             <tbody>
@@ -90,6 +91,8 @@ const ProductList = () => {
                   </td>
                   <td>
                     <Button variant="text" startIcon={<MdEdit />} sx={{ color: '#1976d2' }} onClick={() => toggleModal('edit', product)}>Editar</Button>
+                  </td>
+                  <td>
                     <Button variant="text" startIcon={<MdDelete />} sx={{ color: 'red' }} onClick={() => toggleModal('delete', product)}>Eliminar</Button>
                   </td>
                 </tr>

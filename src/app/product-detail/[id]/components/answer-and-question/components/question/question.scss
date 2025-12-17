@@ -32,3 +32,11 @@
     }
 
 }
+@media screen and (width >= 1024) {
+    .container-question{
+        grid-column: 2 / span 1;
+        grid-row: 2 / span 2;
+        padding: 0px 16px;
+        margin-top: 0px;
+    }
+}

@@ -4,6 +4,7 @@ import React, { useEffect, useState } from 'react'
 import { getProductById } from '../../api/product.api'
 import { AnswerAndQuestion, Details, Gallery, Header, Reviews } from './components'
 import axios from 'axios'
+import './page.scss'
 
 const Page = () => {
     const [product, setProduct] = useState(null);
@@ -42,8 +43,7 @@ const Page = () => {
     }
 
     return (
-        <div>
-            <Header product={product}/>
+        <div className='detail-grid'>
             <Gallery images={product.images} />
             <Details product={product} />
             <AnswerAndQuestion />

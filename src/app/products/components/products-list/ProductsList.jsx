@@ -162,6 +162,7 @@ const ProductsList = () => {
                 }
             })}
             <PacmanLoader
+                className='packman-loader'
                 color="#2F80ED"
                 size={20}
                 cssOverride={{

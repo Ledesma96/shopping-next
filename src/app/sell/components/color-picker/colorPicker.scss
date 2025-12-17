@@ -1,0 +1,31 @@
+@use '../../../constants' as c;
+
+.color-picker {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+
+  label {
+    font-weight: 600;
+  }
+
+  .colors {
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+  }
+
+  .color-circle {
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: 2px solid transparent;
+    box-shadow: 0 2px 5px c.$shadow-color;
+
+    &.active {
+      border-color: c.$accent-color;
+      transform: scale(1.1);
+    }
+  }
+}

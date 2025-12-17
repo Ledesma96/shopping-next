@@ -1,5 +1,5 @@
 'use client'
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './filters.scss';
 import { BsFilterRight } from "react-icons/bs";
 import { FilterOptions, Order } from './components';
@@ -8,6 +8,31 @@ const Filters = ({ filters }) => {
     const [btn, setBtn] = useState({ order: false, filters: false });
     const [order, setOrder] = useState("");
     const [selectedFilters, setSelectedFilters] = useState({});
+    function useWindowSize() {
+        const [windowSize, setWindowSize] = useState({
+            width: undefined,
+            height: undefined,
+        });
+
+        useEffect(() => {
+
+            function handleResize() {
+                setWindowSize({
+                    width: window.innerWidth,
+                    height: window.innerHeight,
+                });
+            }
+
+            window.addEventListener("resize", handleResize);
+        
+            handleResize();
+        
+            return () => window.removeEventListener("resize", handleResize);
+        }, []);
+        return windowSize;
+    }
+
+    const size = useWindowSize();
 
     const handleClick = (command) => {
         setBtn((prev) => ({
@@ -31,12 +56,15 @@ const Filters = ({ filters }) => {
     return (
         <section className='filters-btn'>
             {/* BOTONES ORDENAR / FILTRAR */}
-            <button onClick={() => handleClick('order')}>Ordenar</button>
-            <button onClick={() => handleClick('filters')}>
-                <BsFilterRight />
-                <p>Filtrar</p>
-            </button>
-
+            { size <= 1024 &&
+                <>
+                    <button onClick={() => handleClick('order')}>Ordenar</button>
+                    <button onClick={() => handleClick('filters')}>
+                        <BsFilterRight />
+                        <p>Filtrar</p>
+                    </button>
+                </>
+}
             <Order
                 btn={btn}
                 handleClick={handleClick}

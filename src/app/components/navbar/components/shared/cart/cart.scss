@@ -1,6 +1,8 @@
 @use '../../../../../constants' as c;
 .container-cart{
     position: relative;
+    grid-column: 3 / span 1;
+    grid-row: 1;
     .count{
         position: absolute;
         top: -10px;
@@ -28,5 +30,22 @@
         display: flex;
         justify-content: center;
         align-items: center;
+    }
+}
+
+@media screen and (width >= 1024){
+    .container-cart{
+        width: 50%;
+        height: 80%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .count{
+            top: 0;
+            right: 20px;
+        }
+        .total{
+            bottom: -10px;
+        }
     }
 }

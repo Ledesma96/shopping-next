@@ -1,0 +1,79 @@
+@use '../../../constants' as c;
+
+.single-option-picker {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+
+    label {
+        font-weight: 600;
+        color: c.$text-color;
+    }
+
+    .selected-single {
+        color: white;
+        display: inline-flex;
+        align-items: center;
+        padding: 8px;
+        background-color: c.$accent-color;
+        border-radius: 20px;
+        width: fit-content;
+
+        span {
+            font-size: 0.9rem;
+            text-transform: capitalize;
+        }
+
+        button {
+            background: none;
+            border: none;
+            cursor: pointer;
+            font-size: 1rem;
+            color: white;
+
+            &:hover,
+            &:active,
+            &:focus {
+                background: none;
+                color: white;
+            }
+        }
+    }
+
+    .input-container {
+        position: relative;
+
+        input {
+            width: 100%;
+            padding: 8px 10px;
+            border-radius: 6px;
+            border: 1px solid c.$border-color;
+
+            &:disabled {
+                background-color: #f0f0f0;
+                cursor: not-allowed;
+            }
+        }
+
+        .dropdown {
+            position: absolute;
+            top: 110%;
+            left: 0;
+            right: 0;
+            background: white;
+            border-radius: 6px;
+            box-shadow: 0 4px 10px c.$shadow-color;
+            z-index: 10;
+
+            li {
+                padding: 8px 10px;
+                cursor: pointer;
+                text-transform: capitalize;
+
+                &:hover {
+                    background-color: c.$primary-color-opacity;
+                }
+            }
+        }
+    }
+}

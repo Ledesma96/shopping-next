@@ -1,0 +1,17 @@
+main{
+    .container__startAndHeart{
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+        .container-heart{
+            width: 35px;
+            height: 35px;
+            border-radius: 50%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background-color: white;
+        }
+    }
+}

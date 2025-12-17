@@ -75,6 +75,7 @@
     }
     .clean-btn{
         margin: 0 auto;
+        margin-bottom: 8px;
         width: 90%;
         height: 35px;
         border: none;
@@ -90,4 +91,21 @@
     top: 0;
     right: -100%;
     transition: all 0.5s ease-in-out;
+}
+
+
+@media screen and (width >= 1024) {
+    .filters{
+        width: 100%;
+        padding: 0;
+        position: absolute;
+        top: 0;
+        left: 0;
+        &::before{
+            display: none;
+        }
+        .close{
+            display: none;
+        }
+    }
 }

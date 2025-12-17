@@ -46,6 +46,7 @@ const Search = () => {
                 onChange={e => setSearch(e.target.value)}
                 onKeyDown={handleKeyDown}
                 />
+                <span />
                 <IoIosSearch
                     className="icon"
                     onClick={() =>
