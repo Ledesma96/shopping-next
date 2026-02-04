@@ -1,10 +1,11 @@
 import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import storage from "redux-persist/lib/storage";
+import { logout } from "../api/auth.api";
 
 const api = axios.create({
-  baseURL: "http://localhost:3000",
-  withCredentials: true,
+    baseURL: "http://localhost:3000",
+    withCredentials: true,
 });
 
 // 🔹 Obtener usuario autenticado
@@ -23,7 +24,7 @@ export const fetchUser = createAsyncThunk(
 // 🔹 Cerrar sesión (elimina cookie en el servidor)
 export const logoutUser = createAsyncThunk("auth/logoutUser", async () => {
     try {
-        await api.post("/api/v1/auth/logout"); // tu endpoint de logout del backend
+        await logout();
         await storage.removeItem("persist:root"); // limpia storage local
         return true;
     } catch (error) {
@@ -54,6 +55,8 @@ const authSlice = createSlice({
         })
         // 🔹 Manejo del logout
         .addCase(logoutUser.fulfilled, (state) => {
+            console.log(state);
+            
             state.user = null;
             state.loading = false;
         });

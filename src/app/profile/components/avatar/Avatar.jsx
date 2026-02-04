@@ -2,12 +2,9 @@ import Image from 'next/image'
 import React from 'react'
 import './avatar.scss'
 
-const Avatar = () => {
-    const user = {
-        avatar: '/images/profile.jpg',
-        name: 'Pepito',
-        email: 'pepito@gmail.com'
-    }
+const Avatar = ({user}) => {
+    console.log(user);
+    
     return (
         <section className='container-avatar'>
             <div className='container-avatar__avatar'>
@@ -15,7 +12,7 @@ const Avatar = () => {
                     <Image src={user.avatar} fill alt='Profile image'/>
                 :
                     <p>
-                        {user.name[0].toUpperCase()}
+                        {user?.name?.[0]?.toUpperCase()}
                     </p>
                 }
             </div>

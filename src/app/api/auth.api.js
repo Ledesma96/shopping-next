@@ -1,3 +1,4 @@
+import axios from "axios";
 import api from "./api.config";
 
 export const login = async (data) => {
@@ -6,6 +7,16 @@ export const login = async (data) => {
     
     return response.data;
 };
+
+export const logout = async () => {
+    const response = await api.post('api/v1/users/logout');
+    console.log(response);
+    
+    console.log(response);
+
+    return response.data
+    
+}
 
 export const register = async (data) => {
     const response = await api.post(`api/v1/users/create-user`, data);

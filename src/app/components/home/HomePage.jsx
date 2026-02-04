@@ -9,9 +9,9 @@ const HomePage = () => {
             <Shipments icon={<FaTruckFast />} text={'Envios a todo el pais'}/>
             <Categories />
             <InfoCards />
-            <ProductSection title="Favoritos" find={'belleza'} />
-            <ProductSection title="Accesorios para Celulares" find={'jardinería'} />
-            <ProductSection title="Novedades" find={'moda'} />
+            <ProductSection title="Favoritos" find={'favorites'} />
+            <ProductSection title="Jardineria" find={'jardinería'} />
+            <ProductSection title="Mdoda" find={'moda'} />
         </>
     )
 }

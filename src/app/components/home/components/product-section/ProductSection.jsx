@@ -5,6 +5,7 @@ import { getProducts } from "../../../../api/product.api";
 import ProductCard from "../../../modules/product-card/ProductCard";
 import './productSection.scss';
 import axios from "axios";
+import { getFavorites } from "../../../../api/users.api";
 
 const ProductSection = ({ title, find }) => {
     const [products, setProducts] = useState([]);
@@ -13,23 +14,23 @@ const ProductSection = ({ title, find }) => {
     const ref = useRef();
 
     //para obtener los productos de la db
-    // useEffect(() => {
-    //   const fetchProducts = async() => {
-    //     const result = await getProducts(find);
-    //     setProducts(result.products)
-    //   }
-    //   fetchProducts()
-    // }, [])
-
-    //productos de json
     useEffect(() => {
       const fetchProducts = async () => {
-        const result = await axios.get('/products.json');
-        const filter = result.data.filter(p => p.categories == find)
-        setProducts(filter)
-      }
-      fetchProducts()
-    }, [])
+        if (find !== 'favorites') {
+          const result = await getProducts({ category: find });
+          console.log(find, result);
+          
+          setProducts(result.products);
+        } else {
+          const result = await getFavorites();
+          console.log('favorites', result.data.favorites);
+          setProducts(result.data);
+        }
+      };
+    
+      fetchProducts();
+    }, []);
+    
 
     useEffect(() => {
         if (products.length > 0) {
@@ -69,7 +70,9 @@ const ProductSection = ({ title, find }) => {
       }
     };
     return (
-        <section className="product-section" ref={ref}>
+      <>
+        {products.length > 0 &&
+          <section className="product-section" ref={ref}>
           <div className="product-section__header">
               <h2 className="product-section__title">{title}</h2>
               <a href="#" className="product-section__see-all">Ver todo</a>
@@ -81,9 +84,9 @@ const ProductSection = ({ title, find }) => {
               transform: `translateX(-${translate}px)`,
             }}
           >
-            {products.map((product, index) => (
-              <ProductCard key={index} product={product} />
-            ))}
+              {products.map((product, index) => (
+                <ProductCard key={index} product={product} />
+              ))}
           </div>
 
           <button className="slider-arrows__btn left" onClick={onPrev}>
@@ -92,7 +95,8 @@ const ProductSection = ({ title, find }) => {
           <button className="slider-arrows__btn right" onClick={onNext}>
             <FaChevronRight  size={24} />
           </button>
-        </section>
-    );
+        </section>}
+      </>
+    )
 }
 export default ProductSection
