@@ -1,7 +1,6 @@
 import Image from 'next/image';
 import Link from 'next/link';
 import React from 'react';
-import { CiHeart } from "react-icons/ci";
 import './productCard-styles.scss';
 
 const ProductCard = ({product}) => {

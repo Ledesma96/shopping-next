@@ -4,7 +4,6 @@ import { FaChevronLeft, FaChevronRight } from 'react-icons/fa';
 import { getProducts } from "../../../../api/product.api";
 import ProductCard from "../../../modules/product-card/ProductCard";
 import './productSection.scss';
-import axios from "axios";
 import { getFavorites } from "../../../../api/users.api";
 
 const ProductSection = ({ title, find }) => {

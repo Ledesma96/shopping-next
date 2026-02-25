@@ -6,8 +6,7 @@ import { useEffect, useState } from "react";
 import { FaRegEye, FaRegEyeSlash } from "react-icons/fa";
 import { FiLock, FiUser } from "react-icons/fi";
 import { useDispatch, useSelector } from "react-redux";
-import { login } from "../api/auth.api";
-import { fetchUser } from "../store/authSlice";
+import { fetchUser, login } from "../store/userSlice";
 import './login.scss';
 
 const Login = () => {
@@ -15,14 +14,14 @@ const Login = () => {
     const [password, setPassword] = useState('');
     const [showPassword, setShowPassword] = useState(false);
     const [loading, setLoading] = useState(false);
-    const user = useSelector((state) => state.auth.user);
-
+    const user = useSelector((state) => state.user.user);
     const dispatch = useDispatch();
     const router = useRouter();
-
-
-    useEffect(() => {
-        if (user) window.location.href = '/';
+    
+    useEffect(() =>{
+        if(user){
+            router.replace('/')
+        }
     }, [user])
 
     const handleLogin = async (e) => {
@@ -30,24 +29,17 @@ const Login = () => {
         if (email === '' || password === '') return;
 
         try {
-        setLoading(true);
-        const data = {
-            email: email.toLowerCase(),
-            password
-        };
-        const response = await login(data);
-        console.log(response);
-        
-
-        if (response.message === "Login successful") {
-            await dispatch(fetchUser());
-            router.push('/');
+            setLoading(true);
+            const data = {
+                email: email.toLowerCase(),
+                password
+            };
+            dispatch(login(data));
             
-        }
         } catch (error) {
-        console.error(error);
+            console.error(error);
         } finally {
-        setLoading(false);
+            setLoading(false);
         }
     };
 

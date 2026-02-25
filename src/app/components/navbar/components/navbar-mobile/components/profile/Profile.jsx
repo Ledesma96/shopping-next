@@ -6,7 +6,7 @@ import { useSelector } from 'react-redux';
 import './profile.scss';
 
 const Profile = () => {
-    const user = useSelector((state) => state.auth.user);
+    const user = useSelector((state) => state.user.user);
     
     return (
         <>

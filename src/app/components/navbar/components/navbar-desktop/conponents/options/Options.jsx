@@ -1,12 +1,11 @@
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './options.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { logoutUser } from '../../../../../../store/authSlice'
+import { logoutUser } from '../../../../../../store/userSlice'
 
 const Options = () => {
-    const user = useSelector(state => state.auth.user);
-    
+    const user = useSelector(state => state.user.user);
     const dispatch = useDispatch();
 
     const logOut = () => {

@@ -10,7 +10,7 @@ import { useSelector } from "react-redux";
 import './options.scss';
 
 const Options = ({open, handleClick}) => {
-    const user = useSelector((state) => state.auth.user);
+    const user = useSelector((state) => state.user.user);
     
     const capitalLater = (charter) => {
         return charter.toUpperCase()
