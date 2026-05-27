@@ -45,7 +45,7 @@
     }
 
     &__empty {
-        color: color.adjust(c.$text-color, 40%);
+        color: color.adjust(c.$text-color, $lightness:40%);
         font-style: italic;
     }
 
