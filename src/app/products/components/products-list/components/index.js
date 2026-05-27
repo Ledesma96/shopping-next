@@ -1,3 +1,3 @@
 import Filters from "./filters/Filters";
 
-export {Filters, Order}
+export {Filters}

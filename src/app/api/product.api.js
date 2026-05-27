@@ -1,6 +1,6 @@
 import axios from "axios";
 import api from './api.config';
-export const getProducts = async (params = {}) => {
+const getProducts = async (params = {}) => {
     try {
         const {
             name,
