@@ -1,39 +1,55 @@
 'use client'
-import React from 'react'
+import React, { useEffect } from 'react'
 import './actions.scss'
+import { createOrderApi } from '../../../api/order.api';
+import { useSelector } from 'react-redux';
 
-const Actions = ({ total = 25999, onBack, onConfirm }) => {
+const Actions = ({ onBack, selectedMethod, shippingCost = 1000, selectedAddress, send }) => {
+    const {totalPrice} = useSelector(state => state.cart);
+    const buttonText = selectedMethod === 'mercadopago' 
+        ? 'Pagar con Mercado Pago' 
+        : 'Finalizar Compra';
+
+    const handleOrder = async () => {
+        // Preparamos el objeto con los datos que le faltan al back
+        const orderData = {
+            paymentMethod: selectedMethod, // 'mercadopago' o 'cash'
+            shippingCost: shippingCost,
+            totalAmount: totalPrice,
+            shippingMethod: send ? 'Envio a domicilio' : 'Retiro en el local',
+            shippingAddress: send ? selectedAddress : null // El objeto de dirección que seleccionó en 'Send.jsx'
+        };
+        
+        try {
+            const response = await createOrderApi(orderData);
+            // Aquí podrías redirigir a /success o al link de Mercado Pago
+        } catch (error) {
+            console.error("Error al crear la orden", error);
+        }
+    }
     return (
         <section className='section-actions'>
             <div className='order-summary'>
-                <h4>Resumen del pedido</h4>
-                <div className='summary-row'>
-                <span>Subtotal</span>
-                <span>$24.999</span>
-                </div>
-                <div className='summary-row'>
-                <span>Envío</span>
-                <span>$1.000</span>
-                </div>
+                {/* ... tu resumen de pedido ... */}
                 <div className='summary-total'>
-                <span>Total</span>
-                <span>${total.toLocaleString()}</span>
+                    <span>Total</span>
+                    <span>${totalPrice.toFixed(2)}</span>
                 </div>
             </div>
 
             <div className='actions-buttons'>
                 <button className='btn-back' onClick={onBack}>
-                Volver
+                    Volver
                 </button>
-                <button className='btn-confirm' onClick={onConfirm}>
-                Finalizar compra
+                <button 
+                    className={`btn-confirm ${selectedMethod === 'mercadopago' ? 'mp-style' : ''}`} 
+                    onClick={handleOrder}
+                >
+                    {buttonText}
                 </button>
             </div>
-
-            <div className='coupon'>
-                <input type='text' placeholder='Código de descuento' />
-                <button className='btn-apply'>Aplicar</button>
-            </div>
+            
+            {/* ... cupón ... */}
         </section>
     )
 }

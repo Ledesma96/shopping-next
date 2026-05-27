@@ -3,16 +3,20 @@ import React from 'react'
 import { Button, Typography, Divider } from '@mui/material'
 import './cartActions.scss'
 import { useDispatch, useSelector } from 'react-redux'
-import { clearCart } from '../../../store/cartSlice'
+import { clearCartAsync} from '../../../store/cartSlice'
+import { useRouter } from 'next/navigation'
 
-const CartActions = () => {
-    const { totalPrice } = useSelector(state => state.cart)
+const CartActions = ({cart}) => {
+    const { totalPrice } = useSelector(state => state.cart);
     const dispatch = useDispatch();
+    const router = useRouter();
 
-    const onClearCart = () => {
-        dispatch(clearCart())
+    const onClearCart = (_id) => {
+        dispatch(clearCartAsync(_id))
     }
-    const onCheckout = () => {}
+    const onCheckout = () => {
+        router.push('/checkout')
+    }
     return (
         <div className="cart-actions">
             <Divider sx={{ width: '100%', mb: 2 }} />
@@ -30,7 +34,7 @@ const CartActions = () => {
                 <Button
                 variant="outlined"
                 color="error"
-                onClick={onClearCart}
+                onClick={() => onClearCart(cart._id)}
                 className="clear-btn"
                 >
                 Vaciar carrito

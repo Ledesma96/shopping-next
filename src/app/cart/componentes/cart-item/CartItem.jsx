@@ -1,59 +1,87 @@
 'use client'
 import Image from 'next/image';
-import React, { useEffect, useState } from 'react'
-import { FaRegTrashCan } from "react-icons/fa6";
+import React, { useEffect } from 'react'
+import { FaRegTrashCan, FaPlus, FaMinus } from "react-icons/fa6"; // Agregamos iconos
+import { useDispatch } from 'react-redux';
+import { addOrUpdateCartAsync, removeItemCartAync } from '../../../store/cartSlice';
 import './cartItem.scss'
-import axios from 'axios';
-import { useDispatch, useSelector } from 'react-redux';
-import { deleteFromCart } from '../../../store/cartSlice';
 
-
-const CartItem = () => {
-    const { items } = useSelector((state) => state.cart);
-    const [products, setProducts] = useState([]);
+const CartItem = ({ cartItems }) => {
     const dispatch = useDispatch();
+    useEffect(() => {console.log(cartItems);
+    }, [cartItems])
 
-    const deleteToCart = (_id) => {
-        dispatch(deleteFromCart(_id))
-    }
+    // Función genérica para cambiar cantidad
+    const handleUpdateQuantity = (item, amount) => {
+        // Evitamos que baje de 1 con el botón de resta (para borrar se usa el tacho)
+        if (amount === -1 && item.quantity <= 1) return;
 
+        dispatch(addOrUpdateCartAsync({
+            productId: item.productId._id,
+            sellerId: item.sellerId,
+            quantity: amount
+        }));
+    };
 
-    useEffect(() => {
-        const fetchProducts = async() => {
-            const result = await axios.get('/products.json');
-            const filter = items.map((cartItem) => {
-                const product = result.data[cartItem._id];
-                if (product) {
-                    return {
-                        ...cartItem,
-                        title: product.title,
-                        image: product.images[0],
-                    };
-                } else {
-                    return cartItem;
-                }
-            })
-            setProducts(filter)
-        }
-        fetchProducts()
-    }, [items]);
+    const handleDeleteItem = (_id) => {
+        console.log(_id);
+        
+        dispatch(removeItemCartAync(_id));
+    };
 
-    
     return (
         <main className='container-items'>
-            {products.map(item => (
-                <div key={item.id} className='item'>
-                    <div className='container-image'>
-                        <Image className='image' alt={item.title} fill src={item.image}/>
+            {cartItems.map((item) => {
+                const product = item.productId; 
+                
+                return (
+                    <div key={item._id} className='item'>
+                        <div className='container-image'>
+                        {product?.images?.length > 0 ? (
+                            <Image 
+                                className='image' 
+                                alt={product.title || "Producto"} 
+                                width={40} 
+                                height={40} 
+                                src={product.images[0]} 
+                            />
+                        ) : (
+                            <div className="no-image">No image</div>
+                        )}
                     </div>
-                    <p className='name'>{item.title}</p>
-                    <p>{item.quantity}</p>
-                    <p>${(item.price * item.quantity).toFixed(2)}</p>
-                    <FaRegTrashCan onClick={() => deleteToCart(item._id)}/>
-                </div>
-            ))}
+                        
+                        <div className='info'>
+                            <p className='name'>{product.title}</p>
+                        </div>
+
+                        <div className='quantity-controls'>
+                            <button 
+                                onClick={() => handleUpdateQuantity(item, -1)}
+                                disabled={item.quantity <= 1}
+                            >
+                            <FaMinus />
+                            </button>
+                            <span>{item.quantity}</span>
+                            <button onClick={() => handleUpdateQuantity(item, 1)}>
+                                <FaPlus />
+                            </button>
+                        </div>
+
+                        <p className='price'>
+                            ${(product.price * item.quantity).toFixed(2)}
+                        </p>
+
+                        <div className='actions'>
+                            <FaRegTrashCan 
+                                className='delete-icon' 
+                                onClick={() => handleDeleteItem(item._id)}
+                            />
+                        </div>
+                    </div>
+                );
+            })}
         </main>
     )
 }
 
-export default CartItem
+export default CartItem;

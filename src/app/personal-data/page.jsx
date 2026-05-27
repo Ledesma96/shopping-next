@@ -11,13 +11,12 @@ const FIELD_MAP = {
     nombre: 'name',
     email: 'email',
     telefono: 'phone',
-    direccion: 'address',
 };
 
 const Page = () => {
     const router = useRouter();
     const dispatch = useDispatch();
-    const { user, loading } = useSelector(state => state.auth);
+    const { user, loading } = useSelector(state => state.user);
 
     const [profile, setProfile] = useState({});
 
@@ -37,7 +36,6 @@ const Page = () => {
                 nombre: user.name ?? '',
                 email: user.email ?? '',
                 telefono: user.phone ?? '',
-                direccion: user.address ?? '',
             });
         }
     }, [user]);

@@ -1,15 +1,25 @@
-import React from 'react'
 import './productItem.scss'
+const ProductItem = ({ product }) => {
+    // Extraemos la info del producto populado
+    const { title, images } = product.productId;
 
-const ProductItem = ({product}) => {
     return (
-        <div className='container-item'>
-            <img src={product.imagen} width={60} height={60} alt={product.nombre}/>
-            <p>{product.nombre}</p>
-            <p>{product.cantidad}</p>
-            <p>${product.precio}</p>
+        <div className='product-row'>
+            <div className="product-row__img-container">
+                <img src={images[0]} alt={title} />
+                <span className="quantity-badge">{product.quantity}</span>
+            </div>
+            <div className="product-row__info">
+                <p className="product-row__name">{title}</p>
+                <p className="product-row__unit-price">
+                    Unidad: ${product.price.toLocaleString('es-AR')}
+                </p>
+            </div>
+            <div className="product-row__total">
+                ${(product.price * product.quantity).toLocaleString('es-AR')}
+            </div>
         </div>
-    )
-}
+    );
+};
 
 export default ProductItem

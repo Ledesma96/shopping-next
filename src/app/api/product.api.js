@@ -1,36 +1,46 @@
 import axios from "axios";
 import api from './api.config';
-const getProducts = async (params = {}) => {
+export const getProducts = async (params = {}) => {
     try {
         const {
             name,
             limit,
             page,
-            category,
+            category, // Puede ser string o array
             sort,
             minPrice,
             maxPrice,
-            tags,
+            tags,     // Puede ser string o array
         } = params;
-        
+
+        // 1. Query Params (en la URL)
         const queryParams = new URLSearchParams({
             ...(name && { name }),
             ...(limit && { limit }),
             ...(page && { page }),
-            ...(category && { category }),
             ...(sort && { sort }),
             ...(minPrice && { minPrice }),
             ...(maxPrice && { maxPrice }),
-            ...(tags && { tags }),
         }).toString();
-        
-        const response = await axios.get(`http://127.0.0.1:3000/api/v1/products/get-all-products?${queryParams}`);
+
+        // 2. Body (Arrays de categorías y tags)
+        // Nos aseguramos de que siempre se envíen como arrays
+        const body = {
+            category: Array.isArray(category) ? category : (category ? [category] : []),
+            tags: Array.isArray(tags) ? tags : (tags ? [tags] : [])
+        };
+
+        // 3. Petición POST
+        const response = await axios.post(
+            `http://127.0.0.1:3000/api/v1/products/get-all-products?${queryParams}`,
+            body
+        );
+
         return response.data;
     } catch (error) {
-        console.log(error);
-        throw error
+        console.error("Error en getProducts API:", error);
+        throw error;
     }
-    
 };
 
 const getProductById = async(id) => {

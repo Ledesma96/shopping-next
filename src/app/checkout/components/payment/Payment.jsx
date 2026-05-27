@@ -1,153 +1,75 @@
 'use client'
 import React, { useState } from 'react'
-import { LuCircleFadingPlus } from "react-icons/lu";
+import { FaHandHoldingUsd, FaWallet } from "react-icons/fa";
 import './payment.scss'
 
-const userCards = [
-    {
-        id: 1,
-        brand: 'Visa',
-        last4: '1234',
-        holder: 'Gabriel López',
-        exp: '12/26',
-        isDefault: true
-    },
-    {
-        id: 2,
-        brand: 'Mastercard',
-        last4: '5678',
-        holder: 'Gabriel López',
-        exp: '03/25',
-        isDefault: false
-    }
-];
-
-const Payment = () => {
-    const [selectedMethod, setSelectedMethod] = useState('card');
-    const [cards, setCards] = useState(userCards);
-    const [showForm, setShowForm] = useState(false);
-    const [newCard, setNewCard] = useState({
-        holder: '',
-        number: '',
-        exp: '',
-        cvv: ''
-    });
-
-    const handleChange = (e) => {
-        setNewCard({ ...newCard, [e.target.name]: e.target.value });
-    };
-
-    const handleSubmit = (e) => {
-        e.preventDefault();
-        const id = cards.length + 1;
-        const last4 = newCard.number.slice(-4);
-        setCards([
-        ...cards,
-        { id, brand: 'Nueva tarjeta', last4, holder: newCard.holder, exp: newCard.exp }
-        ]);
-        setNewCard({ holder: '', number: '', exp: '', cvv: '' });
-        setShowForm(false);
-    };
+const Payment = ({selectedMethod, setSelectedMethod}) => {
+    const [cashAmount, setCashAmount] = useState('');
 
     return (
         <section className='section-payment'>
             <h3>Método de pago</h3>
 
             <div className='payment-methods'>
-                <label className='payment-option'>
-                <input
-                    type='radio'
-                    name='paymentMethod'
-                    value='card'
-                    checked={selectedMethod === 'card'}
-                    onChange={() => setSelectedMethod('card')}
-                />
-                <span>Tarjeta</span>
+                <label className={`payment-option ${selectedMethod === 'mercadopago' ? 'active' : ''}`}>
+                    <input
+                        type='radio'
+                        name='paymentMethod'
+                        value='mercadopago'
+                        checked={selectedMethod === 'mercadopago'}
+                        onChange={() => setSelectedMethod('mercadopago')}
+                    />
+                    <div className='option-content'>
+                        <FaWallet className='icon' />
+                        <span>Mercado Pago / Tarjeta</span>
+                    </div>
                 </label>
 
-                <label className='payment-option'>
-                <input
-                    type='radio'
-                    name='paymentMethod'
-                    value='cash'
-                    checked={selectedMethod === 'cash'}
-                    onChange={() => setSelectedMethod('cash')}
-                />
-                <span>Efectivo</span>
+                <label className={`payment-option ${selectedMethod === 'efectivo' ? 'active' : ''}`}>
+                    <input
+                        type='radio'
+                        name='paymentMethod'
+                        value='efectivo'
+                        checked={selectedMethod === 'efectivo'}
+                        onChange={() => setSelectedMethod('efectivo')}
+                    />
+                    <div className='option-content'>
+                        <FaHandHoldingUsd className='icon' />
+                        <span>Efectivo</span>
+                    </div>
                 </label>
             </div>
 
-            {selectedMethod === 'card' && (
-                <div className='cards-container'>
-                {cards.map((card) => (
-                    <label key={card.id} className='card-item'>
-                    <input
-                        type='radio'
-                        name='selectedCard'
-                        value={card.id}
-                        defaultChecked={card.isDefault}
-                    />
-                    <div className='card-info'>
-                        <p className='brand'>{card.brand}</p>
-                        <p className='details'>**** **** **** {card.last4}</p>
-                        <p className='holder'>{card.holder} — {card.exp}</p>
+            <div className='payment-details'>
+                {selectedMethod === 'mercadopago' && (
+                    <div className='mp-container'>
+                        <p>Serás redirigido a Mercado Pago para completar tu pago de forma segura.</p>
+                    
+                        <p className='helper-text'>Acepta tarjetas de crédito, débito y dinero en cuenta.</p>
                     </div>
-                    </label>
-                ))}
-
-                <div className='add-card' onClick={() => setShowForm(!showForm)}>
-                    <LuCircleFadingPlus strokeWidth={1} />
-                    <p>Agregar nueva tarjeta</p>
-                </div>
-
-                {showForm && (
-                    <form className='form-add-card' onSubmit={handleSubmit}>
-                        <input
-                            type='text'
-                            name='holder'
-                            placeholder='Nombre del titular'
-                            value={newCard.holder}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='number'
-                            placeholder='Número de tarjeta'
-                            value={newCard.number}
-                            onChange={handleChange}
-                            required
-                        />
-                        <div className='form-row'>
-                            <input
-                            type='text'
-                            name='exp'
-                            placeholder='MM/AA'
-                            value={newCard.exp}
-                            onChange={handleChange}
-                            required
-                            />
-                            <input
-                            type='text'
-                            name='cvv'
-                            placeholder='CVV'
-                            value={newCard.cvv}
-                            onChange={handleChange}
-                            required
-                            />
-                        </div>
-                        <button type='submit'>Guardar tarjeta</button>
-                        <button type='submit' className='cancel'>Cancelar</button>
-                    </form>
                 )}
-                </div>
-            )}
 
-            {selectedMethod === 'cash' && (
-                <div className='cash-info'>
-                <p>Podrás abonar en efectivo al momento de recibir tu pedido.</p>
-                </div>
-            )}
+                {selectedMethod === 'efectivo' && (
+                    <div className='cash-container'>
+                        <div className='info-box'>
+                            <p>Pagás al recibir tu pedido en la puerta de tu casa.</p>
+                        </div>
+                        <div className='change-request'>
+                            <p>¿Con cuánto vas a abonar? (Opcional)</p>
+                            <div className='input-wrapper'>
+                                <span>$</span>
+                                <input 
+                                    type='number' 
+                                    placeholder='Ej: 20000'
+                                    value={cashAmount}
+                                    onChange={(e) => setCashAmount(e.target.value)}
+                                />
+                            </div>
+                            <small>Para que el repartidor lleve el cambio justo.</small>
+                        </div>
+                    </div>
+                )}
+            </div>
         </section>
     );
 };

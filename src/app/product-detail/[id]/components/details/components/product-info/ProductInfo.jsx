@@ -45,41 +45,45 @@ const ProductInfo = ({ product }) => {
             </div>
 
             {/* Talle */}
-            <div className="product-info-container__sizes">
-                <label htmlFor="sizeSelect">Talle:</label>
-                <select
-                    id="sizeSelect"
-                    value={selectedSize}
-                    onChange={(e) => setSelectedSize(e.target.value)}
-                >
-                    <option value="">Elegir talle</option>
-                    <option value="S">S</option>
-                    <option value="M">M</option>
-                    <option value="L">L</option>
-                    <option value="XL">XL</option>
-                </select>
-            </div>
+            {product.size &&
+                <div className="product-info-container__sizes">
+                    <label htmlFor="sizeSelect">Talle:</label>
+                    <select
+                        id="sizeSelect"
+                        value={selectedSize}
+                        onChange={(e) => setSelectedSize(e.target.value)}
+                    >
+                        <option value="">Elegir talle</option>
+                        <option value="S">S</option>
+                        <option value="M">M</option>
+                        <option value="L">L</option>
+                        <option value="XL">XL</option>
+                    </select>
+                </div>
+            }
 
             {/* Colores dinámicos */}
-            <div className="product-info-container__colors">
-                <p className="colors-title">Color:</p>
-                <section className="colors-grid">
-                    {colors.map((color) => (
-                        <div
-                            key={color.code}
-                            className={`color-circle ${selectedColor?.code === color.code ? "selected" : ""}`}
-                            style={{ backgroundColor: color.code }}
-                            onClick={() => setSelectedColor(color)}
-                        />
-                    ))}
-                </section>
+            {product.color &
+                <div className="product-info-container__colors">
+                    <p className="colors-title">Color:</p>
+                    <section className="colors-grid">
+                        {colors.map((color) => (
+                            <div
+                                key={color.code}
+                                className={`color-circle ${selectedColor?.code === color.code ? "selected" : ""}`}
+                                style={{ backgroundColor: color.code }}
+                                onClick={() => setSelectedColor(color)}
+                            />
+                        ))}
+                    </section>
 
-                {selectedColor && (
-                    <p className="selected-color-label">
-                        Color elegido: <strong>{selectedColor.name}</strong>
-                    </p>
-                )}
-            </div>
+                    {selectedColor && (
+                        <p className="selected-color-label">
+                            Color elegido: <strong>{selectedColor.name}</strong>
+                        </p>
+                    )}
+                </div>
+            }
 
             <div className='product-info-container__count'>
                 <button onClick={() => sumCount(-1)}>-</button>

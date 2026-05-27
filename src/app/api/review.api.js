@@ -1,10 +1,10 @@
 import axios from "axios";
-const api_url = 'http://localhost:3000/';
+const api_url = 'http://localhost:3000/api/v1/';
 import api from './api.config'
 
 const getReview = async(id) => {
     try {
-        const result = await axios.get(`${api_url}api/v1/review/get-reviews?productId=${id}`)
+        const result = await axios.get(`${api_url}review/get-reviews?productId=${id}`)
         return result.data
     } catch (error) {
         console.log(error.message);
@@ -15,7 +15,7 @@ const getReview = async(id) => {
 
 const createReview = async(data) => {
     try {
-        const result = await api.post('api/v1/review/create-review', data);
+        const result = await api.post('/review/create-review', data);
         return result.data
     } catch (error) {
         console.log(error);

@@ -11,6 +11,7 @@ const NavbarMobile = () => {
                     src="/logo.png"
                     alt="Mercado Libre Logo"
                     fill
+                    priority
                 />
             </div>
             <Search />

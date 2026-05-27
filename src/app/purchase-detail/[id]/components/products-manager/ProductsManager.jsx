@@ -1,74 +1,98 @@
 'use client'
 import { useParams } from 'next/navigation';
-import React from 'react';
-import ProductItem from '../product-item/ProductItem';
+import React, { useEffect, useState } from 'react';
 import './productManager.scss';
-const purchasesMock = [
-    {
-        id: "1",
-        fecha: "2024-09-12",
-        total: 45999,
-        productos: [
-            {
-                id: "p1",
-                title: "Remera deportiva Nike",
-                price: 15999,
-                quantity: 1,
-                image: "/images/products/remera-nike.jpg",
-            },
-            {
-                id: "p2",
-                title: "Zapatillas running Adidas",
-                price: 29999,
-                quantity: 1,
-                image: "/images/products/zapatillas-adidas.jpg",
-            }
-        ],
-    },
-    {
-        id: "2",
-        fecha: "2024-09-18",
-        total: 78999,
-        productos: [
-            {
-                id: "p3",
-                title: "Campera impermeable Puma",
-                price: 48999,
-                quantity: 1,
-                image: "/images/products/campera-puma.jpg",
-            },
-            {
-                id: "p4",
-                title: "Pantalón training Under Armour",
-                price: 30000,
-                quantity: 1,
-                image: "/images/products/pantalon-under.jpg",
-            }
-        ],
-    },
-];
+import { getOrderByIdApi } from '../../../../api/order.api';
+import ProductItem from '../product-item/ProductItem';
 
 const ProductsManager = () => {
     const params = useParams();
+    const [purchase, setPurchase] = useState(null);
+    const [loading, setLoading] = useState(true);
     const id = params.id;
-    const purchase = purchasesMock.find(p => p.id === id)
+
+    useEffect(() => {
+        const fetchOrder = async () => {
+            if (!id) return;
+            try {
+                setLoading(true);
+                const response = await getOrderByIdApi(id);
+                setPurchase(response);
+            } catch (error) {
+                console.error("Error:", error);
+            } finally {
+                setLoading(false);
+            }
+        };
+        fetchOrder();
+    }, [id]);
+
+    if (loading) return <div className="loader">Cargando tu compra...</div>;
+    if (!purchase) return <div className="error-msg">No encontramos esta orden.</div>;
+
+    const date = new Date(purchase.createdAt).toLocaleDateString('es-AR', {
+        day: 'numeric', month: 'long', year: 'numeric'
+    });
+
     return (
-        <div className='container-detail'>
-            <div className='container-detail__header'>
-                <p>{purchase.id}</p>
-                <p>{purchase.fecha}</p>
-            </div>
-            <div className='container-detail__products'>
-                {purchase.productos.map(product => (
-                    <ProductItem key={product.id} product={product}/>
-                ))}
-            </div>
-            <div className='container-detail__price'>
-                <p>total:</p>
-                <p>${purchase.total}</p>
-            </div>
+        <div className='purchase-detail-page'>
+            <header className='purchase-header'>
+                <div className="purchase-header__main">
+                    <h1>Detalle de Compra</h1>
+                    <span className="order-number">#{purchase.orderNumber}</span>
+                </div>
+                <div className="purchase-header__info">
+                    <p>Realizada el <strong>{date}</strong></p>
+                    <p>Método: <strong>{purchase.shippingMethod}</strong></p>
+                </div>
+            </header>
+
+            <main className='purchase-content'>
+                <section className='packages-list'>
+                    {purchase.subOrders?.map((subOrder, index) => (
+                        <div key={subOrder._id} className="package-card">
+                            <div className="package-card__header">
+                                <h3>Paquete {index + 1} de {purchase.subOrders.length}</h3>
+                                <span className={`status-tag ${subOrder.status}`}>
+                                    {subOrder.status}
+                                </span>
+                            </div>
+                            
+                            <div className='package-card__products'>
+                                {subOrder.products?.map((item) => (
+                                    <ProductItem key={item._id} product={item} />
+                                ))}
+                            </div>
+                            
+                            <div className="package-card__footer">
+                                <span>Subtotal del paquete</span>
+                                <strong>${subOrder.subTotal.toLocaleString('es-AR')}</strong>
+                            </div>
+                        </div>
+                    ))}
+                </section>
+
+                <aside className='purchase-summary'>
+                    <h3>Resumen de pago</h3>
+                    <div className="summary-row">
+                        <span>Productos</span>
+                        <span>${(purchase.totalAmount - purchase.shippingCost).toLocaleString('es-AR')}</span>
+                    </div>
+                    <div className="summary-row">
+                        <span>Costo de envío</span>
+                        <span>{purchase.shippingCost === 0 ? "Gratis" : `$${purchase.shippingCost.toLocaleString('es-AR')}`}</span>
+                    </div>
+                    <div className="summary-row total">
+                        <span>Total pagado</span>
+                        <span>${purchase.totalAmount?.toLocaleString('es-AR')}</span>
+                    </div>
+                    <footer className="summary-method">
+                        Pagaste con {purchase.paymentMethod === 'mercadopago' ? 'Mercado Pago' : 'Efectivo'}
+                    </footer>
+                </aside>
+            </main>
         </div>
-    )
+    );
 }
 
-export default ProductsManager
+export default ProductsManager;

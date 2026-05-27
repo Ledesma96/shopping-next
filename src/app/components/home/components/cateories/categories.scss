@@ -45,16 +45,15 @@
         width: 70px;
         height: 70px;
         border-radius: 50%;
+        position: relative; // 👈 Esto le da el marco al 'fill'
         display: flex;
         align-items: center;
         justify-content: center;
-        position: relative;
-  
+        overflow: hidden;
+
         .categories__image {
-          object-fit: cover;
-          width: 60%;
-          height: 60%;
-          border-radius: 50%;
+          object-fit: contain; 
+          transform: scale(0.7); 
         }
       }
     }

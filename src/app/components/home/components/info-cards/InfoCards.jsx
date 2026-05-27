@@ -12,7 +12,9 @@ export default function InfoCards() {
                         src="/images/envios.jpg"
                         alt="Envíos a todo el país"
                         fill
+                        unoptimized={true}
                         className="promoCards__img"
+                        priority
                     />
 
                     <div className="promoCards__overlay">
@@ -27,6 +29,7 @@ export default function InfoCards() {
                         src="/images/seguridad.jpg"
                         alt="Pagos 100% seguros"
                         fill
+                        unoptimized={true}
                         className="promoCards__img"
                     />
 
@@ -42,6 +45,7 @@ export default function InfoCards() {
                         src="/images/soporte.jpg"
                         alt="Atención personalizada"
                         fill
+                        unoptimized={true}
                         className="promoCards__img"
                     />
 

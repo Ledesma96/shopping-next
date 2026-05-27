@@ -2,14 +2,10 @@
 import { useSelector } from "react-redux";
 import { FaShoppingCart } from "react-icons/fa";
 import './cart.scss'
-import { useEffect } from "react";
 import Link from "next/link";
 const CartIcon = () => {
     const {totalItems, totalPrice, items} = useSelector((state) => state.cart);
     
-    useEffect(() =>{
-        console.log(items);
-    }, [items])
     return (
         <Link href='/cart' className="container-cart">
             <FaShoppingCart size={24} />

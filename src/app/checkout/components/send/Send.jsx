@@ -1,46 +1,34 @@
 'use client'
-import React, { useState } from 'react'
-import { LuCircleFadingPlus } from "react-icons/lu";
+import React, { useEffect, useState } from 'react'
+import { LuCircleFadingPlus, LuStore, LuClock } from "react-icons/lu";
+import { FaMapMarkerAlt } from "react-icons/fa";
 import './send.scss'
+import { useDispatch, useSelector } from 'react-redux';
+import { addAddress } from '../../../store/userSlice';
 
-const initialAddresses = [
-    {
-        id: 1,
-        fullName: "Gabriel López",
-        street: "Av. San Martín 2450",
-        city: "Berazategui",
-        province: "Buenos Aires",
-        postalCode: "1884",
-        country: "Argentina",
-        phone: "+54 11 2345-6789",
-        isDefault: true
-    },
-    {
-        id: 2,
-        fullName: "Gabriel López",
-        street: "Calle 9 Nº 1423, Piso 2, Depto B",
-        city: "La Plata",
-        province: "Buenos Aires",
-        postalCode: "1900",
-        country: "Argentina",
-        phone: "+54 11 9876-5432",
-        isDefault: false
-    }
-];
-
-const Send = () => {
-    const [send, setSend] = useState(true);
-    const [addresses, setAddresses] = useState(initialAddresses);
+const Send = ({selectedAddress, setSelectedAddress, send, setSend}) => {
+    const { address } = useSelector(state => state.user.user);
+    const dispatch = useDispatch();
+    const [addresses, setAddresses] = useState([]);
     const [showForm, setShowForm] = useState(false);
     const [newAddress, setNewAddress] = useState({
-        fullName: '',
-        street: '',
-        city: '',
-        province: '',
-        postalCode: '',
-        country: '',
-        phone: ''
+        addressType: '', street: '', city: '', province: '', cp: ''
     });
+
+    useEffect(() => {
+        setAddresses(address)
+    }, [address])
+
+    useEffect(() => {
+        const defaultAddr = address[0]
+        if (defaultAddr) {
+            setSelectedAddress(defaultAddr);
+        }
+    }, [address]);
+
+    const handleSelectAddress = (addre) => {
+        setSelectedAddress(addre)
+    }
 
     const handleChange = (e) => {
         setNewAddress({ ...newAddress, [e.target.name]: e.target.value });
@@ -48,41 +36,26 @@ const Send = () => {
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        const id = addresses.length + 1;
-        setAddresses([...addresses, { ...newAddress, id, isDefault: false }]);
-        setNewAddress({
-        fullName: '',
-        street: '',
-        city: '',
-        province: '',
-        postalCode: '',
-        country: '',
-        phone: ''
-        });
+        dispatch(addAddress(newAddress));
+        setNewAddress({ addressType:'', street: '', city: '', province: '', cp: '' });
         setShowForm(false);
     };
-
-    const handleCancel = () => {
-        setShowForm(false)
-    }
 
     return (
         <section className='section-send'>
             <div className='container-send'>
-                <label className='container-input'>
+                <label className={`container-input ${send ? 'active' : ''}`}>
                     <input
                         type='radio'
-                        value='send'
                         name='delivery'
                         checked={send === true}
                         onChange={() => setSend(true)}
                     />
                     <p>Envío a domicilio</p>
                 </label>
-                <label className='container-input'>
+                <label className={`container-input ${!send ? 'active' : ''}`}>
                     <input
                         type='radio'
-                        value='withdraw'
                         name='delivery'
                         checked={send === false}
                         onChange={() => setSend(false)}
@@ -91,93 +64,57 @@ const Send = () => {
                 </label>
             </div>
 
-            {send && (
+            {send ? (
                 <div className='addresses'>
-                {addresses.map((address) => (
-                    <label key={address.id} className='address-card'>
-                        <input
-                            type='radio'
-                            name='shippingAddress'
-                            value={address.id}
-                            defaultChecked={address.isDefault}
-                        />
-                        <div className='container-info'>
-                            <p>{address.fullName}</p>
-                            <p>{address.street} - {address.city}</p>
-                        </div>
-                    </label>
-                ))}
+                    {addresses.map((address) => (
+                        <label key={address._id} className={`address-card ${selectedAddress._id === address._id ? 'selected' : ''}`}>
+                            <input
+                                type='radio'
+                                name='shippingAddress'
+                                checked={selectedAddress._id === address._id}
+                                onChange={() => handleSelectAddress(address)}
+                            />
+                            <div className='container-info'>
+                                <p className='type'>{address.addressType}</p>
+                                <p>{address.street} - {address.city}</p>
+                                <p className='cp'>CP: {address.cp}</p>
+                            </div>
+                        </label>
+                    ))}
 
-                <div
-                    className='container-add-address'
-                    onClick={() => setShowForm(!showForm)}
-                >
-                    <LuCircleFadingPlus strokeWidth={1} />
-                    <p>Agregar dirección</p>
+                    <div className='container-add-address' onClick={() => setShowForm(!showForm)}>
+                        <LuCircleFadingPlus strokeWidth={1} />
+                        <p>Agregar dirección</p>
+                    </div>
+
+                    {showForm && (
+                        <form className='form-add-address' onSubmit={handleSubmit}>
+                            <input type='text' name='addressType' placeholder='Ej: Casa / Trabajo' value={newAddress.addressType} onChange={handleChange} required />
+                            <input type='text' name='street' placeholder='Calle y número' value={newAddress.street} onChange={handleChange} required />
+                            <div className='form-row-grid'>
+                                <input type='text' name='city' placeholder='Ciudad' value={newAddress.city} onChange={handleChange} required />
+                                <input type='text' name='cp' placeholder='CP' value={newAddress.cp} onChange={handleChange} required />
+                            </div>
+                            <button type='submit' className='confirm'>Guardar dirección</button>
+                            <button type='button' className='cancel' onClick={() => setShowForm(false)}>Cancelar</button>
+                        </form>
+                    )}
                 </div>
-
-                {showForm && (
-                    <form className='form-add-address' onSubmit={handleSubmit}>
-                        <input
-                            type='text'
-                            name='fullName'
-                            placeholder='Nombre completo'
-                            value={newAddress.fullName}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='street'
-                            placeholder='Calle y número'
-                            value={newAddress.street}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='city'
-                            placeholder='Ciudad'
-                            value={newAddress.city}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='province'
-                            placeholder='Provincia'
-                            value={newAddress.province}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='postalCode'
-                            placeholder='Código postal'
-                            value={newAddress.postalCode}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='country'
-                            placeholder='País'
-                            value={newAddress.country}
-                            onChange={handleChange}
-                            required
-                        />
-                        <input
-                            type='text'
-                            name='phone'
-                            placeholder='Teléfono'
-                            value={newAddress.phone}
-                            onChange={handleChange}
-                            required
-                        />
-                        <button type='submit' className='confirm'>Guardar dirección</button>
-                        <button className='cancel' onClick={handleCancel}>Cancelar</button>
-                    </form>
-                )}
+            ) : (
+                <div className='withdraw-container'>
+                    <div className='store-card'>
+                        <div className='store-icon'>
+                            <LuStore />
+                        </div>
+                        <div className='store-info'>
+                            <h4>Distribuidora Berazategui</h4>
+                            <p><FaMapMarkerAlt /> Calle Falsa 123, Berazategui</p>
+                            <p><LuClock /> Lunes a Sábados: 09:00 a 20:00hs</p>
+                        </div>
+                    </div>
+                    <div className='withdraw-notice'>
+                        <p>Tu pedido estará listo para retirar en <strong>45 minutos</strong> después de confirmar la compra.</p>
+                    </div>
                 </div>
             )}
         </section>

@@ -4,10 +4,9 @@ import './filters.scss';
 import { BsFilterRight } from "react-icons/bs";
 import { FilterOptions, Order } from './components';
 
-const Filters = ({ filters }) => {
+const Filters = ({ filters, selectedFilters, setSelectedFilters }) => {
     const [btn, setBtn] = useState({ order: false, filters: false });
     const [order, setOrder] = useState("");
-    const [selectedFilters, setSelectedFilters] = useState({});
     function useWindowSize() {
         const [windowSize, setWindowSize] = useState({
             width: undefined,

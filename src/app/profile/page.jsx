@@ -12,7 +12,7 @@ const usuarioEjemplo = {
 };
 
 const page = () => {
-    const user = useSelector(state => state.auth.user);
+    const user = useSelector(state => state.user);
     console.log(user);
     
 

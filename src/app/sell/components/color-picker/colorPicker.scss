@@ -13,19 +13,37 @@
     display: flex;
     gap: 10px;
     flex-wrap: wrap;
-  }
+    .color-item-wrapper {
+        position: relative; // Contenedor de referencia
+        display: flex;
+        flex-direction: column;
+        align-items: center;
 
-  .color-circle {
-    width: 28px;
-    height: 28px;
-    border-radius: 50%;
-    cursor: pointer;
-    border: 2px solid transparent;
-    box-shadow: 0 2px 5px c.$shadow-color;
+        .color-circle {
+          width: 28px;
+          height: 28px;
+          border-radius: 50%;
+          cursor: pointer;
+          border: 2px solid transparent;
+          box-shadow: 0 2px 5px c.$shadow-color;
 
-    &.active {
-      border-color: c.$accent-color;
-      transform: scale(1.1);
+          &.active {
+            border-color: c.$accent-color;
+            transform: scale(1.1);
+          }
+        }
+
+        .color-tooltip {
+            position: absolute;
+            top: -25px; // Aparece arriba del círculo
+            background: #333;
+            color: white;
+            padding: 2px 8px;
+            border-radius: 4px;
+            font-size: 12px;
+            white-space: nowrap;
+            pointer-events: none; // Para que el mouse no interfiera con el tooltip
+        }
     }
   }
 }

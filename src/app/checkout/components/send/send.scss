@@ -1,113 +1,156 @@
 @use '../../../constants' as c;
-.section-send{
 
-    .container-send{
+.section-send {
+    .container-send {
         margin-top: 8px;
         display: flex;
         flex-direction: row;
         justify-content: center;
         align-items: center;
-        .container-input{
+        background-color: white;
+        border-bottom: 0.5px solid c.$border-color;
+
+        .container-input {
             position: relative;
             width: 50%;
-            height: 45px;
-            background-color: white;
-            border-bottom: 0.5px solid c.$border-color;
+            height: 50px;
             display: flex;
-            justify-content: flex-start;
+            justify-content: center;
             align-items: center;
-            input, p{
-                margin-left: 8px;
-            }
-            p{
-                margin-top: 2px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+
+            input { margin-right: 8px; }
+            p {
+                margin: 0;
+                font-size: 0.9rem;
                 color: c.$text-gray-color;
             }
-        }
-        .container-input:nth-child(2)::before {
-            content: "";
-            position: absolute;
-            left: 0;
-            top: 0;
-            bottom: 0;
-            width: 0.5px;
-            background-color: rgba(0, 0, 0, 0.1);
-            transform: scaleX(0.5);
+
+            &.active {
+                background-color: #f8f9fa;
+                p { color: c.$primary-color; font-weight: 600; }
+                border-bottom: 2px solid c.$primary-color;
+            }
         }
     }
-    .addresses{
+
+    .addresses {
         margin-top: 8px;
         width: 100%;
-        label, .container-add-address{
+        
+        .address-card {
             width: 95%;
-            margin: 0 auto;
-            margin-top: 8px;
-            padding: 8px;
-            height: 100px;
+            margin: 8px auto;
+            padding: 12px;
             display: flex;
-            flex-direction: row;
-            justify-content: flex-start;
             align-items: center;
             background-color: white;
-            border-radius: 6px;
-            box-shadow: 1px 1px 1px 0px c.$shadow-color;
-            .container-info{
-                margin-left: 8px;
+            border-radius: 8px;
+            border: 2px solid transparent;
+            box-shadow: 0 2px 4px c.$shadow-color;
+            transition: border-color 0.2s;
+
+            &.selected {
+                border-color: c.$primary-color;
+            }
+
+            .container-info {
+                margin-left: 12px;
+                p { margin: 0; font-size: 0.85rem; color: #666; }
+                .type { font-weight: bold; color: #333; margin-bottom: 2px; }
+                .cp { font-size: 0.75rem; color: #999; }
             }
         }
-        .container-add-address{
-            flex-direction: column;
-            justify-content: center;
-            margin-bottom: 16px;
-            color: c.$text-gray-color;
-            svg{
-                width: 90px;
-                height: 90px;
-            }
-        }
-        .form-add-address {
+
+        .container-add-address {
+            width: 95%;
+            margin: 16px auto;
+            height: 80px;
             display: flex;
             flex-direction: column;
-            gap: 10px;
-            margin-top: 12px;
-            padding: 16px;
-            border: 1px solid rgba(0,0,0,0.15);
-            border-radius: 12px;
-            background-color: #fafafa;
-        
-            input {
-                padding: 8px 12px;
-                border: 1px solid rgba(0,0,0,0.2);
-                border-radius: 8px;
-                font-size: 0.9rem;
-                outline: none;
-                transition: border-color 0.2s ease;
-            
-                &:focus {
-                    border-color: c.$primary-color-hover;
-                }
-            }
-        
-            .confirm, .cancel {
+            justify-content: center;
+            align-items: center;
+            background-color: #fff;
+            border: 1px dashed #ccc;
+            border-radius: 8px;
+            color: c.$text-gray-color;
+            cursor: pointer;
+
+            svg { font-size: 2rem; }
+            p { margin-top: 4px; font-size: 0.9rem; }
+        }
+    }
+
+    .withdraw-container {
+        padding: 20px;
+        .store-card {
+            display: flex;
+            background: white;
+            padding: 15px;
+            border-radius: 10px;
+            box-shadow: 0 2px 8px rgba(0,0,0,0.05);
+            align-items: center;
+            gap: 15px;
+
+            .store-icon {
+                font-size: 2.5rem;
+                color: c.$primary-color;
+                background: #fff5f2;
                 padding: 10px;
-                border: none;
-                border-radius: 8px;
-                background-color: c.$primary-color;
-                color: #fff;
-                font-weight: 600;
-                cursor: pointer;
-                transition: background-color 0.2s ease;
-            
-                &:hover {
-                    background-color: c.$primary-color-hover;
-                }
+                border-radius: 50%;
             }
-            .cancel{
-                background-color: c.$accent-color;
-                &:hover {
-                    background-color: c.$accent-color-hover;
+
+            .store-info {
+                h4 { margin: 0 0 5px 0; color: #333; }
+                p { 
+                    margin: 3px 0; 
+                    font-size: 0.85rem; 
+                    color: #666; 
+                    display: flex; 
+                    align-items: center; 
+                    gap: 5px; 
+                    svg { color: c.$primary-color; }
                 }
             }
         }
+
+        .withdraw-notice {
+            margin-top: 15px;
+            padding: 12px;
+            background-color: #e8f4fd;
+            border-radius: 6px;
+            color: #2c3e50;
+            font-size: 0.85rem;
+            text-align: center;
+        }
+    }
+
+    .form-add-address {
+        width: 95%;
+        margin: 0 auto;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        padding: 15px;
+        background: #fdfdfd;
+        border-radius: 10px;
+        border: 1px solid #eee;
+
+        .form-row-grid {
+            display: grid;
+            grid-template-columns: 2fr 1fr;
+            gap: 10px;
+        }
+
+        input {
+            padding: 10px;
+            border: 1px solid #ddd;
+            border-radius: 6px;
+            font-size: 0.9rem;
+        }
+
+        .confirm { background-color: c.$primary-color; color: white; border: none; padding: 10px; border-radius: 6px; font-weight: bold; cursor: pointer; }
+        .cancel { background: transparent; border: none; color: #888; cursor: pointer; text-decoration: underline; }
     }
 }

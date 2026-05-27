@@ -2,7 +2,7 @@ import { createAsyncThunk, createSlice } from "@reduxjs/toolkit";
 import axios from "axios";
 import storage from "redux-persist/lib/storage";
 import { loginApi, logout } from "../api/auth.api";
-import { addAddressApi, deleteAddressApi, updateAddressApi } from "../api/users.api";
+import { addAddressApi, deleteAddressApi, updateAddressApi } from "../api/address.api";
 
 const api = axios.create({
     baseURL: "http://localhost:3000",
@@ -14,11 +14,10 @@ export const fetchUser = createAsyncThunk(
     "user/fetchUser",
     async (_, { rejectWithValue }) => {
         try {
-        const response = await api.get("/api/v1/users/me");
-        
-        return response.data;
+            const response = await api.get("/api/v1/users/me");
+            return response.data;
         } catch (error) {
-        return rejectWithValue(error.response?.data || null);
+            return rejectWithValue(error.response?.data || "Error");
         }
     }
 );

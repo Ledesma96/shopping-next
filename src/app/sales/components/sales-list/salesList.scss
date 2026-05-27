@@ -1,0 +1,39 @@
+@use '../../../constants' as c;
+
+.sales-list-container {
+    width: 100%;
+    margin-top: 20px;
+    
+    .sales-table-wrapper {
+        background: #fff;
+        border-radius: 10px;
+        border: 1px solid #eee;
+        overflow-x: auto; // Permite scroll horizontal en móviles si es necesario
+    }
+
+    .sales-table {
+        width: 100%;
+        border-collapse: collapse;
+        min-width: 600px; // Evita que se colapse demasiado
+
+        th {
+            background-color: #f9fafb;
+            padding: 16px;
+            text-align: left;
+            font-size: 0.75rem;
+            color: #6b7280;
+            text-transform: uppercase;
+            border-bottom: 1px solid #eee;
+        }
+
+        .empty-row {
+            padding: 60px;
+            text-align: center;
+            color: #9ca3af;
+        }
+    }
+
+    @media (max-width: 768px) {
+        .hide-mobile { display: none; }
+    }
+}

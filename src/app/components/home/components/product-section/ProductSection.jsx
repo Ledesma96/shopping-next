@@ -5,8 +5,10 @@ import { getProducts } from "../../../../api/product.api";
 import ProductCard from "../../../modules/product-card/ProductCard";
 import './productSection.scss';
 import { getFavorites } from "../../../../api/users.api";
+import { useSelector } from "react-redux";
 
 const ProductSection = ({ title, find }) => {
+    const {user, loading} = useSelector(state => state.user)
     const [products, setProducts] = useState([]);
     const [styles, setStyles] = useState({});
     const [translate, setTranslate] = useState(0);
@@ -15,20 +17,34 @@ const ProductSection = ({ title, find }) => {
     //para obtener los productos de la db
     useEffect(() => {
       const fetchProducts = async () => {
-        if (find !== 'favorites') {
-          const result = await getProducts({ category: find });
-          console.log(find, result);
-          
-          setProducts(result.products);
-        } else {
-          const result = await getFavorites();
-          console.log('favorites', result.data.favorites);
-          setProducts(result.data);
+        // 2. Si estamos buscando favoritos pero el usuario no está, ni lo intentamos
+        if (find === 'favorites' && !user) {
+          setProducts([]);
+          return;
+        }
+
+        try {
+          if (find !== 'favorites') {
+            const result = await getProducts({ category: find });
+            setProducts(result?.products || []);
+          } else {
+            // Ya sabemos que user existe por el check de arriba
+            const result = await getFavorites();
+            console.log(result);
+            
+            setProducts(result?.data?.favorites || []);
+          }
+        } catch (error) {
+          console.error("Error en la petición:", error);
+          setProducts([]);
         }
       };
-    
-      fetchProducts();
-    }, []);
+
+      // 3. Solo ejecutamos si no estamos en un proceso de "loading" de auth
+      if (!loading) {
+        fetchProducts();
+      }
+    }, [find, user, loading]);
     
 
     useEffect(() => {

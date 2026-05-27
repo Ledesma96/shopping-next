@@ -5,7 +5,7 @@ const categories = [
   { name: "Celulares", icon: "/images/celulares.png" },
   { name: "Moda", icon: "/images/moda.png" },
   { name: "Hogar", icon: "/images/hogar.png" },
-  { name: "Juguetes", icon: "/images/juguetes.png!w700wp" },
+  { name: "Juguetes", icon: "/images/juguetes.png" },
   { name: "Deportes", icon: "/images/deporte.png" },
   { name: "Belleza", icon: "/images/belleza.webp" },
 ];
@@ -22,8 +22,8 @@ export default function Categories() {
                   src={cat.icon}
                   alt={cat.name}
                   fill
-                  sizes="70px"
                   className="categories__image"
+                  priority
                 />
               </div>
             </div>

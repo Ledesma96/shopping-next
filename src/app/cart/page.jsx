@@ -1,55 +1,21 @@
-import React from 'react'
+'use client'
+import React, { useEffect, useState } from 'react'
 import { CartActions, CartEmpty, CartHeader, CartItem } from './componentes'
-export const cartItems = [
-    {
-        id: 1,
-        name: "Zapatillas Nike Air Max 270",
-        price: 120000,
-        quantity: 1,
-        stock: 10,
-        image: "/images/ADIX0108-1.jpeg",
-        category: "Calzado",
-        brand: "Nike",
-    },
-    {
-        id: 2,
-        name: "Camiseta Adidas Originals",
-        price: 55000,
-        quantity: 2,
-        stock: 15,
-        image: "/images/ADIX0108-1.jpeg",
-        category: "Ropa",
-        brand: "Adidas",
-    },
-    {
-        id: 3,
-        name: "Guantes de entrenamiento Puma Grip",
-        price: 35000,
-        quantity: 1,
-        stock: 8,
-        image: "/images/ADIX0108-1.jpeg",
-        category: "Accesorios",
-        brand: "Puma",
-    },
-    {
-        id: 4,
-        name: "Pelota de fútbol Adidas Al Rihla",
-        price: 80000,
-        quantity: 1,
-        stock: 12,
-        image: "/images/ADIX0108-1.jpeg",
-        category: "Deportes",
-        brand: "Adidas",
-    },
-];
-const page = () => {
+import { useSelector } from 'react-redux'
 
+const page = () => {
+    const cart= useSelector(state => state.cart);
+    
+    const [cartItems, setCartItems] = useState([]);
+    useEffect(() => {
+        setCartItems(cart.items)
+    }, [cart.items])
     return (
         <div>
             <CartHeader />
             <CartItem cartItems={cartItems}/>
             {cartItems.length > 0 ?
-                    <CartActions/>
+                    <CartActions cart={cart}/>
                 :
                     <CartEmpty />
             }

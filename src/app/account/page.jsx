@@ -5,22 +5,28 @@ const page = () => {
     return (
         <main>
             <Card
+                title={'Vincular Mercado Pago'}
+                description={'Conectá tu cuenta para empezar a recibir cobros de tus ventas de forma automática.'}
+                url={'/connect-mp'}
+            />
+
+            <Card
                 title={'Direcciones'}
                 description={'Administra tus direcciones de envío y facturación para recibir tus compras donde prefieras.'}
                 url={'/addresses'}
             />
 
-            <Card
+            {/* <Card
                 title={'Métodos de pago'}
                 description={'Gestiona tus tarjetas y métodos de pago para compras más rápidas y seguras.'}
                 url={'/payment-methods'}
-            />
+            /> */}
 
-            <Card
+            {/* <Card
                 title={'Preferencias de notificación'}
                 description={'Elige cómo y cuándo recibir alertas sobre tus compras, ventas y promociones.'}
                 url={'/notifications'}
-            />
+            /> */}
 
             <Card
                 title={'Seguridad'}

@@ -1,16 +1,17 @@
 'use client'
-import axios from 'axios';
 import { useSearchParams } from 'next/navigation'
 import React, { useEffect, useState, useRef, useCallback } from 'react'
 import { AddCart, ProductCard } from '../../../components';
 import './productsList.scss'
 import { Filters } from './components';
 import { PacmanLoader } from "react-spinners";
+import { getProducts } from '../../../api/product.api';
 
 const ProductsList = () => {
-    const searchParams = useSearchParams()
-    const search = searchParams.get('search')
-
+    const searchParams = useSearchParams();
+    const search = searchParams.get('search') || '';
+    
+    const [selectedFilters, setSelectedFilters] = useState({});
     const [products, setProducts] = useState([]);
     const [filtersArray, setFiltersArray] = useState([]);
     const [page, setPage] = useState(1);
@@ -18,83 +19,100 @@ const ProductsList = () => {
     const [hasMore, setHasMore] = useState(true);
 
     const observer = useRef();
+    // 1. Referencia para controlar la captura inicial de filtros
+    const isFirstLoad = useRef(true);
 
-    // Claves que realmente queremos usar como filtros
-    const filterKeys = [
-        "categories",
-        "tags",
-        "featured",
-        "isActive",
-        "isVisible",
-        "ratingAverage",
-    ];
+    const translations = {
+        categories: "Categorías",
+        tags: "Estado",
+        featured: "Destacados",
+        ratingAverage: "Calificación",
+        isActive: "Estado",
+        isVisible: "Visibilidad"
+    };
 
-    const fetchProducts = async (pageNum) => {
+    const fetchProducts = async (pageNum, isReset = false) => {
         setLoading(true);
         try {
-            // Simulación de paginación
-            const result = await axios.get('/products.json');
-            if (!result.data) return;
+            const params = {
+                name: search,
+                page: pageNum,
+                limit: 20,
+                // Mapeo dinámico para el Body
+                category: selectedFilters.categories || [], 
+                tags: selectedFilters.tags || [],
+                minPrice: selectedFilters.minPrice,
+                maxPrice: selectedFilters.maxPrice,
+            };
 
-            const filtered = result.data.filter(p =>
-                search
-                    ? p.title.toLowerCase().includes(search.trim().toLowerCase())
-                    : true
-            );
+            const data = await getProducts(params);
+            const newProducts = Array.isArray(data) ? data : (data.products || []); 
 
-            const limit = 20;
-            const start = (pageNum - 1) * limit;
-            const end = start + limit;
-
-            // Cortamos el array según la página
-            const newProducts = filtered.slice(start, end);
-
-            // Si es la primera página, reemplazamos; si no, concatenamos
-            setProducts((prev) =>
-                pageNum === 1 ? newProducts : [...prev, ...newProducts]
-            );
-
-            // Si ya no hay más productos, deshabilitamos el scroll infinito
-            if (newProducts.length < limit || end >= filtered.length) {
+            if (!newProducts || newProducts.length === 0) {
+                if (pageNum === 1) setProducts([]);
                 setHasMore(false);
+                return;
             }
+
+            setProducts((prev) =>
+                isReset ? newProducts : [...prev, ...newProducts]
+            );
+
+            setHasMore(newProducts.length === 20);
         } catch (err) {
-            console.error(err);
+            console.error("Error en fetchProducts:", err);
         } finally {
             setLoading(false);
         }
     };
 
-
+    // Al cambiar la búsqueda global: Reset total (productos, página y filtros disponibles)
     useEffect(() => {
+        isFirstLoad.current = true; // Habilitamos captura de filtros para la nueva búsqueda
         setProducts([]);
         setPage(1);
         setHasMore(true);
-        fetchProducts(1);
+        fetchProducts(1, true);
     }, [search]);
 
-    // Genera filtros importantes de manera dinámica
+    // Al cambiar filtros laterales: Solo reset de productos y página
     useEffect(() => {
-        if (products.length === 0) return;
+        // No tocamos isFirstLoad.current para que los filtros no desaparezcan
+        setPage(1);
+        setHasMore(true);
+        fetchProducts(1, true);
+    }, [selectedFilters]);
+
+    // Scroll infinito
+    useEffect(() => {
+        if (page === 1) return;
+        fetchProducts(page, false);
+    }, [page]);
+
+    // Lógica de Generación de Filtros (Solo la primera vez por búsqueda)
+    useEffect(() => {
+        // Si no hay productos o ya capturamos los filtros iniciales, no hacemos nada
+        if (products.length === 0 || !isFirstLoad.current) return;
+
+        const ignoredKeys = [
+            '_id', 'title', 'description', 'price', 'stock', 
+            'images', 'seller', 'salesCount', 'isActive', 
+            'isVisible', 'reviews', '__v', 'id'
+        ];
 
         const filtersObj = {};
 
         products.forEach((product) => {
-            filterKeys.forEach((key) => {
-                const value = product[key];
-                if (value == null) return;
-
+            Object.entries(product).forEach(([key, value]) => {
+                if (ignoredKeys.includes(key) || value == null) return;
                 if (!filtersObj[key]) filtersObj[key] = new Set();
 
                 if (Array.isArray(value)) {
                     value.forEach((v) => {
-                        if (typeof v === "object" && v !== null && v.$oid) {
-                            filtersObj[key].add(v.$oid);
-                        } else {
-                            filtersObj[key].add(v);
-                        }
+                        const valToAdd = (typeof v === 'object' && v.$oid) ? v.$oid : v;
+                        filtersObj[key].add(valToAdd);
                     });
-                } else if (typeof value === "object" && value.$oid) {
+                } else if (typeof value === 'object' && value.$oid) {
                     filtersObj[key].add(value.$oid);
                 } else {
                     filtersObj[key].add(value);
@@ -102,67 +120,53 @@ const ProductsList = () => {
             });
         });
 
-        const filtersObjArrays = Object.fromEntries(
-            Object.entries(filtersObj).map(([key, set]) => [key, [...set]])
-        );
+        const formattedFilters = Object.entries(filtersObj)
+            .map(([key, valueSet]) => ({
+                key, 
+                displayName: translations[key] || key,
+                values: Array.from(valueSet).sort()
+            }))
+            .filter(f => f.values.length > 1);
 
-        const filtersArray = Object.entries(filtersObjArrays).map(([key, values]) => ({
-            key,
-            values
-        }));
+        setFiltersArray(formattedFilters);
+        
+        // IMPORTANTÍSIMO: Bloqueamos futuras actualizaciones de filtros hasta que cambie 'search'
+        isFirstLoad.current = false; 
 
-        setFiltersArray(filtersArray);
     }, [products]);
 
-    // Intersection Observer para scroll infinito
     const lastProductRef = useCallback((node) => {
         if (loading) return;
         if (observer.current) observer.current.disconnect();
-
         observer.current = new IntersectionObserver((entries) => {
             if (entries[0].isIntersecting && hasMore) {
                 setPage((prev) => prev + 1);
             }
         });
-
         if (node) observer.current.observe(node);
     }, [loading, hasMore]);
 
-    // Llamar a la API cuando page cambia
-    useEffect(() => {
-        if (page === 1) return;
-        fetchProducts(page);
-    }, [page]);
-
     return (
         <main className='container-views'>
-            <Filters filters={filtersArray} />
-
+            <Filters
+                filters={filtersArray}
+                selectedFilters={selectedFilters}
+                setSelectedFilters={setSelectedFilters}
+            />
             {products.map((product, i) => {
-                if (i === products.length - 1) {
+                const isLast = i === products.length - 1;
                     return (
-                        <div className='container-card' ref={lastProductRef} key={i}>
+                        <div className='container-card' ref={isLast ? lastProductRef : null} key= {product._id || i}>
                             <ProductCard product={product} />
-                            <AddCart id={product._id}/>
+                            <AddCart product={product}/>
                         </div>
                     );
-                } else {
-                    return (
-                        <div className='container-card' key={i}>
-                            <ProductCard product={product} />
-                            <AddCart id={product._id}/>
-                        </div>
-                    );
-                }
             })}
             <PacmanLoader
                 className='packman-loader'
                 color="#2F80ED"
                 size={20}
-                cssOverride={{
-                    display: "block",
-                    margin: "16px auto",     // centra horizontalmente
-                }}
+                cssOverride={{display: "block", margin: "16px auto",}}
                 loading={loading}
             />
             {!hasMore && <p className="end-message">No hay más productos</p>}

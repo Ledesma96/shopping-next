@@ -1,179 +1,128 @@
 @use '../../../constants' as c;
-
 .section-payment {
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    margin-top: 20px;
+    margin: 0 auto;
+    width: 95%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.05);
 
     h3 {
-        margin-left: 16px;
+        margin-bottom: 20px;
         font-size: 1.2rem;
-        font-weight: 600;
-    }
-}
-
-.payment-methods {
-    width: 100%;
-    height: 45px;
-    display: flex;
-    background-color: white;
-    border-bottom: 0.5px solid c.$border-color;
-
-    .payment-option {
-        position: relative;
-        width: 50%;
-        display: flex;
-        align-items: center;
-        cursor: pointer;
-
-        input[type='radio'] {
-            margin-left: 16px;
-            accent-color: c.$primary-color;
-        }
-
-        span {
-        font-weight: 500;
         color: #333;
-        }
-    }
-    .payment-option:nth-child(2)::before{
-        content: "";
-        position: absolute;
-        width: 0.5px;
-        height: 100%;
-        top: 0;
-        left: 0;
-        background-color: c.$border-color;
-    }
-}
-
-.cards-container {
-    width: 95%;
-    margin: 0 auto;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-
-    .card-item {
-        display: flex;
-        align-items: flex-start;
-        gap: 12px;
-        padding: 14px;
-        border: 1px solid rgba(0,0,0,0.15);
-        border-radius: 12px;
-        transition: all 0.25s ease;
-        cursor: pointer;
-
-        &:hover {
-        border-color: c.$accent-color;
-        box-shadow: 0 4px 12px rgba(c.$accent-color, 0.25);
-        }
-
-        input[type='radio'] {
-        margin-top: 4px;
-        accent-color: c.$primary-color;
-        }
-
-        .card-info {
-            .brand {
-                font-weight: 600;
-                color: #222;
-            }
-            .details {
-                font-family: monospace;
-                font-size: 0.9rem;
-                color: #444;
-            }
-            .holder {
-                color: #666;
-                font-size: 0.85rem;
-            }
-        }
     }
 
-    .add-card {
-        display: flex;
-        align-items: center;
-        gap: 8px;
-        padding: 12px;
-        border: 1px dashed c.$accent-color;
-        border-radius: 12px;
-        color: c.$accent-color;
-        cursor: pointer;
-        transition: all 0.2s ease;
+    .payment-methods {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 15px;
+        margin-bottom: 25px;
 
-        &:hover {
-        background-color: rgba(c.$accent-color-hover, 0.1);
-        border-color: c.$accent-color-hover;
-        color: c.$accent-color-hover;
-        transform: translateY(-2px);
-        }
-
-        svg {
-        stroke-width: 1;
-        }
-    }
-
-    .form-add-card {
-        display: flex;
-        flex-direction: column;
-        gap: 10px;
-        margin-top: 12px;
-        padding: 16px;
-        border: 1px solid rgba(0,0,0,0.15);
-        border-radius: 12px;
-        background-color: #fafafa;
-
-        input {
-            padding: 8px 12px;
-            border: 1px solid rgba(0,0,0,0.2);
-            border-radius: 8px;
-            font-size: 0.9rem;
-            outline: none;
-            transition: c.$border-color 0.2s ease;
-
-            &:focus {
-                border-color: c.$accent-color;
-            }
-        }
-
-        .form-row {
-            display: flex;
-            gap: 10px;
-            input{
-                width: 50%;
-            }
-        }
-
-        button {
-            padding: 10px;
-            border: none;
-            border-radius: 8px;
-            background-color: c.$primary-color;
-            color: #fff;
-            font-weight: 600;
+        .payment-option {
             cursor: pointer;
-            transition: background-color 0.2s ease;
+            border: 2px solid #eee;
+            border-radius: 10px;
+            padding: 15px;
+            transition: all 0.3s ease;
+            position: relative;
 
-            &:hover {
-                background-color: c.$primary-color-hover;
+            input {
+                position: absolute;
+                opacity: 0;
             }
-        }
-        .cancel{
-            background-color: c.$accent-color;
-            &:hover {
-                background-color: c.$accent-color-hover;
+
+            .option-content {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                gap: 8px;
+
+                .icon {
+                    font-size: 1.5rem;
+                    color: #666;
+                }
+
+                span {
+                    font-weight: 500;
+                    font-size: 0.9rem;
+                    color: #444;
+                }
+            }
+
+            &.active {
+                border-color: #009ee3; // Azul Mercado Pago
+                background-color: #f0faff;
+
+                .icon, span {
+                    color: #009ee3;
+                }
             }
         }
     }
-}
 
-.cash-info {
-    background-color: #fafafa;
-    border: 1px solid rgba(0,0,0,0.15);
-    border-radius: 12px;
-    padding: 14px;
-    font-size: 0.95rem;
-    color: #444;
+    .payment-details {
+        min-height: 150px;
+
+        .mp-container {
+            text-align: center;
+            p { font-size: 0.95rem; color: #666; margin-bottom: 20px; }
+
+            .mp-button {
+                background-color: #009ee3;
+                color: white;
+                border: none;
+                padding: 12px 30px;
+                border-radius: 6px;
+                font-weight: bold;
+                font-size: 1rem;
+                cursor: pointer;
+                transition: background 0.3s;
+                width: 100%;
+
+                &:hover {
+                    background-color: #007eb5;
+                }
+            }
+        }
+
+        .cash-container {
+            .info-box {
+                background: #fdf6e3;
+                padding: 15px;
+                border-radius: 8px;
+                border-left: 4px solid #f39c12;
+                margin-bottom: 20px;
+                p { font-size: 0.9rem; color: #856404; margin: 0; }
+            }
+
+            .change-request {
+                p { font-size: 0.9rem; margin-bottom: 8px; font-weight: 500; }
+                
+                .input-wrapper {
+                    display: flex;
+                    align-items: center;
+                    border: 1px solid #ddd;
+                    border-radius: 6px;
+                    padding: 0 10px;
+                    
+                    span { color: #888; margin-right: 5px; }
+                    input {
+                        border: none;
+                        padding: 10px 0;
+                        width: 100%;
+                        outline: none;
+                    }
+                }
+                small { color: #999; margin-top: 5px; display: block; }
+            }
+        }
+
+        .helper-text {
+            display: block;
+            margin-top: 15px;
+            font-size: 0.8rem;
+            color: #aaa;
+        }
+    }
 }

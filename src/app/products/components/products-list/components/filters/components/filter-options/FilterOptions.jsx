@@ -31,7 +31,7 @@ const FilterOptions = ({btn, filters, handleCheckboxChange, selectedFilters, han
             {filters.map((filter, i) => (
                 <div key={filter.key} className="filter-group">
                     <div className='header' onClick={() => toggleAccordion(i)}>
-                        <h4 className="filter-title">{filter.key}</h4>
+                        <h4 className="filter-title">{filter.displayName}</h4>
                         <IoIosArrowDown className={accordion[i] ? "up" : "down"}/>
                     </div>
                     <div

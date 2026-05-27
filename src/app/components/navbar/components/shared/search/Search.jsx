@@ -2,69 +2,89 @@
 import React, { useEffect, useState } from 'react'
 import './search.scss'
 import { IoIosSearch } from 'react-icons/io'
-import Link from 'next/link'
 import { useRouter } from 'next/navigation'
-
-const mockProducts = [
-    { title: 'Remera de algodón Adidas' },
-    { title: 'Pantalón deportivo Nike' },
-    { title: 'Zapatillas Puma Urban' },
-    { title: 'Campera impermeable Reebok' }
-]
+import { IoMdTime, IoMdClose } from 'react-icons/io' // Iconos extra
 
 const Search = () => {
     const router = useRouter();
     const [search, setSearch] = useState('');
-    const [products, setProducts] = useState([]);
+    const [history, setHistory] = useState([]);
+    const [showHistory, setShowHistory] = useState(false);
+    const [height, setHeight] = useState('0px')
+
+    // 1. Cargar historial al montar el componente
+    useEffect(() => {
+        const savedHistory = JSON.parse(localStorage.getItem('searchHistory')) || [];
+        setHistory(savedHistory);
+    }, []);
+
+    // 2. Función para guardar en el historial
+    const saveToHistory = (term) => {
+        const trimmedTerm = term.trim();
+        if (!trimmedTerm) return;
+
+        // Evitar duplicados y mantener solo las últimas 5 búsquedas
+        const newHistory = [
+            trimmedTerm,
+            ...history.filter(item => item !== trimmedTerm)
+        ].slice(0, 5);
+
+        setHistory(newHistory);
+        localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+    };
+
+    const handleSearch = (term) => {
+        if (term.trim() !== '') {
+            saveToHistory(term);
+            router.push(`/products?search=${term}`);
+            setSearch('');
+            setShowHistory(false);
+        }
+    };
+
+    const deleteHistoryItem = (e, item) => {
+        e.stopPropagation(); // Evita que se dispare la búsqueda al borrar
+        const newHistory = history.filter(h => h !== item);
+        setHistory(newHistory);
+        localStorage.setItem('searchHistory', JSON.stringify(newHistory));
+    };
 
     useEffect(() => {
-        if (search.trim() === '') {
-        setProducts([])
-        return
-        }
-
-        const filtered = mockProducts.filter(p =>
-        p.title.toLowerCase().includes(search.toLowerCase())
-        )
-
-        setProducts(filtered)
-    }, [search]);
-
-    const handleKeyDown = (e) => {
-        if (e.key === 'Enter' && search.trim() !== '') {
-            router.push(`/products?search=${search}`);
-            setSearch('')
-        }
-    }
+        const newHeight = (30 * history.length) + 'px';
+        setHeight(newHeight);
+    }, [history])
 
     return (
         <div className="container-search">
             <div className="search-box">
                 <input
-                placeholder="Buscar productos..."
-                value={search}
-                onChange={e => setSearch(e.target.value)}
-                onKeyDown={handleKeyDown}
+                    placeholder="Buscar productos..."
+                    value={search}
+                    onChange={e => setSearch(e.target.value)}
+                    onKeyDown={(e) => e.key === 'Enter' && handleSearch(search)}
+                    onFocus={() => setShowHistory(true)}
+                    onBlur={() => setTimeout(() => setShowHistory(false), 200)} // Timeout para permitir el click en el historial
                 />
-                <span />
-                <IoIosSearch
-                    className="icon"
-                    onClick={() =>
-                        search.trim() && router.push(`/products?search=${search}`)
-                    }
-                />
-            </div>
+                <IoIosSearch className="icon" onClick={() => handleSearch(search)} />
 
-            {products.length > 0 && (
-                <div className="results">
-                {products.map((p, i) => (
-                    <Link key={i} href="/" className="item">
-                    <img src="/images/ADIX0108-1.jpeg" className="img" alt={p.title} />
-                    <p>{p.title}</p>
-                    </Link>
-                ))}
-                </div>
-            )}
+                {/* 3. Renderizado del Historial */}
+                {showHistory && history.length > 0 && (
+                    <div className="history-dropdown" style={{height}}>
+                        {history.map((item, index) => (
+                            <div key={index} className="history-item" onClick={() => handleSearch(item)}>
+                                <div className="content">
+                                    <IoMdTime className="clock-icon" />
+                                    <p>{item}</p>
+                                </div>
+                                <IoMdClose 
+                                    className="delete-icon" 
+                                    onClick={(e) => deleteHistoryItem(e, item)} 
+                                />
+                            </div>
+                        ))}
+                    </div>
+                )}
+            </div>
         </div>
     )
 }
