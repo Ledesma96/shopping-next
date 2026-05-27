@@ -30,7 +30,7 @@
         button {
             width: 40%;
             border: none;
-            background-color: lighten(c.$accent-color, 30%); // un coral suave
+            background-color: color.adjust(c.$accent-color, 30%); // un coral suave
             border-radius: 6px;
             color: c.$text-color;
             transition: background-color 0.2s ease;
