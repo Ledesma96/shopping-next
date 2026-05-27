@@ -8,7 +8,7 @@ export default function NotFound() {
     return (
         <div className='not-found'>
             <img src='/images/gif404.gif'/>
-            <div className='not-found__container-text'>
+            <div className='not-found__container-text' alt="persona que no encuentra nada">
                 <h1>404 - Página no encontrada</h1>
                 <p>La página que buscas no existe.</p>
             </div>
